@@ -167,7 +167,7 @@ body {
   transition: color 0.3s ease; /* Transición suave */
   font-size: 2em;
   height: 60px; /* Altura deseada */
-  line-height: 0; /* Alineación vertical del contenido */
+  line-height: 3em; /* Alineación vertical del contenido */
 }
 
 /* Estilo específico para el botón previo */

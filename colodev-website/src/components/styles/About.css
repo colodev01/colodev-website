@@ -1,15 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit");
+
 .about-container {
-    height: 100%;
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 columnas con igual ancho */
-    grid-gap: 20px; /* Espacio entre las celdas */
-    padding: 20px;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 2 columnas con igual ancho */
+  grid-gap: 20px; /* Espacio entre las celdas */
+  padding: 20px;
 }
 
 .about-item {
-    background-color: #f0f0f0; /* Color de fondo de cada celda */
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+  font-size: 2.5em;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera */
 }
+
+.roadmap {
+  margin: 15px auto;
+  width: auto;
+  padding: 0 15px 0 30px;
+  border-left: 2px solid #ccc;
+  animation: slideDown 1s ease forwards; /* Aplica la animación slideDown */
+  opacity: 0; /* Inicialmente, establece la opacidad en 0 */
+}
+
+.roadmap-item {
+  position: relative; /* Añade posición relativa para contener la pelotita */
+  padding: 10px 10px;
+  line-height: 1.7;
+  position: relative;
+  height: 110px;
+  margin-bottom: 20px;
+}
+
+.roadmap-item:before {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #000;
+  border: 3px solid #ddd;
+  position: absolute;
+  top: 25px;
+  left: -1em; /* Ajusta la posición izquierda para alinear con la línea */
+  z-index: 1; /* Asegura que la pelotita esté sobre la línea */
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%); /* Comienza desde arriba */
+    opacity: 0; /* Inicialmente, invisible */
+  }
+  to {
+    transform: translateY(0); /* Termina en su posición original */
+    opacity: 1; /* Se vuelve más opaco al final de la animación */
+  }
+}
+
+.year {
+  font-family: "Outfit", sans-serif; /* Utiliza la fuente 'Outfit' para las descripciones */
+  color: #fff;
+  font-size: 18px; /* Increase the font size */
+}
+
+.description {
+  font-family: "Outfit", sans-serif; /* Utiliza la fuente 'Outfit' para las descripciones */
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.sub-description {
+  font-family: "Outfit", sans-serif; /* Utiliza la fuente 'Outfit' para las descripciones */
+  font-size: 16px; /* Tamaño de fuente más pequeño */
+  margin-top: 5px; /* Espacio entre la descripción principal y la sub-descripción */
+}
+
+.skills {
+  margin-top: 0.5em;
+  display: flex;
+  flex-direction: column;
+}
+
+.skill {
+  margin-bottom: 10px;
+}
+
+.skill-name {
+  font-family: "Outfit", sans-serif;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.progress-bar {
+  background-color: whitesmoke;
+  height: 10px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.progress {
+  height: 100%;
+  border-radius: 5px;
+  animation: growWidth 1.5s ease-out forwards;
+}
+
+@keyframes growWidth {
+  from {
+    width: 0;
+  }
+}
+
+.courses {
+    animation: slideUp 1s ease forwards; /* Aplica la animación slideUp */
+    opacity: 0; /* Inicialmente, establece la opacidad en 0 */
+}
+
+@keyframes slideUp {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+
+.course-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+  }
+  
+  .course-image {
+    width: 100px; /* Ajusta el ancho según necesites */
+    height: auto;
+    margin-right: 10px;
+  }
+  
+  .course-details {
+    flex-grow: 1; /* Asegura que los detalles ocupen el espacio restante */
+  }
+  
+  .course-title {
+    font-family: "Outfit", sans-serif;
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+  
+  .course-status {
+    font-family: "Outfit", sans-serif;
+    font-size: 16px;
+    font-style: italic;
+  }
+  
