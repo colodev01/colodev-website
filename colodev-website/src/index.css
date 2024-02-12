@@ -106,56 +106,84 @@ blockquote:before, blockquote:after, q:before, q:after {
   color: var(--blanco);
 }
 
-/* Nivelamos problemas de tipografías y colocación de formularios */
-form, input, textarea, select, button, label {
-  font-family: inherit;
-  font-size: inherit;
-  -webkit-hyphens: auto;
-      -ms-hyphens: auto;
-          hyphens: auto;
-  background-color: transparent;
-  color: inherit;
-  display: block;
-  /* opcional */
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-}
-
-/* Reseteamos las tablas */
-table, tr, td {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-/* Evitamos problemas con los SVG */
-svg {
-  width: 100%;
-  display: block;
-  fill: currentColor;
-}
-
-/* (Probándolo, no usar en producción) En el caso de añadir una  */
-/* p svg{
-  display: inline;
-  width: initial;
-} */
-/* Configuramos la tipografía para toda la web */
-
 @font-face {
   font-family: "Pixel Operator";
   src: url(../public/assets/fonts/PixelOperator.ttf);
 }
 
 body {
+  margin: 0;
   min-height: 100vh;
   font-size: 100%;
   font-family: "Pixel Operator";
   color: var(--negro);
-  /* Imagen de fondo */
-  background-image:url(https://wallpaperaccess.com/full/3492868.gif);
-    background-size:100%;
-    background-attachment: fixed;
-    height:100%;
-    width:100%;
+  background-image: url(https://wallpaperaccess.com/full/3492868.gif);
+  background-size: cover; /* Use 'cover' to ensure the background covers the entire viewport */
+  background-position: center;
+  height: 100%;
+  width: 100%;
+  overflow-y: hidden; /* Hide the vertical scrollbar */
+}
+
+/* Slider CSS */
+
+.slider-container {
+  margin: 0em 5em;
+  backdrop-filter: brightness(60%);
+  border-radius: 20px;
+  padding: 1em 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 85vh;
+  overflow: hidden;
+}
+
+/* Estilos para el contenedor de diapositivas */
+.slides {
+  height: 100%;
+  width: 400%; /* Ancho total del contenedor (4 diapositivas en este caso) */
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Estilo para cada diapositiva */
+.slide {
+  flex: 0 0 25%;
+  width: 25%; /* Cada diapositiva ocupa el 25% del ancho total */
+  overflow: hidden;
+}
+
+/* Estilos para los botones de navegación */
+.prev-btn,
+.next-btn {
+  position: absolute; /* Posición absoluta para sacarlos del flujo normal */
+  top: 50%; /* Colocar los botones en el centro verticalmente */
+  transform: translateY(-50%); /* Alinear verticalmente */
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.5); /* Color ligeramente transparente */
+  transition: color 0.3s ease; /* Transición suave */
+  font-size: 2em;
+  height: 60px; /* Altura deseada */
+  line-height: 0; /* Alineación vertical del contenido */
+}
+
+/* Estilo específico para el botón previo */
+.prev-btn {
+  margin-left: 1em;
+  left: 10px; /* Colocar el botón previo a la izquierda */
+}
+
+/* Estilo específico para el botón siguiente */
+.next-btn {
+  margin-right: 1em;
+  right: 10px; /* Colocar el botón siguiente a la derecha */
+}
+
+/* Cambia el color al pasar el mouse sobre los botones */
+.prev-btn:hover,
+.next-btn:hover {
+  color: rgba(255, 255, 255, 1); /* Ajusta la transparencia al pasar el cursor */
 }

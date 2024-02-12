@@ -1,0 +1,15 @@
+.about-container {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas con igual ancho */
+    grid-gap: 20px; /* Espacio entre las celdas */
+    padding: 20px;
+}
+
+.about-item {
+    background-color: #f0f0f0; /* Color de fondo de cada celda */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}

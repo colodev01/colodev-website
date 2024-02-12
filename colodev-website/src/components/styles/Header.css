@@ -33,11 +33,12 @@
     flex-flow: row nowrap;
     justify-content: flex-end;
     align-items: center;
+    margin-right: 3em;
 }
 
 .header-li{
     margin: 1em;
-    font-size: x-large;
+    font-size: 180%;
     display: inline-block;
     position: relative;
     color: whitesmoke;
