@@ -48,7 +48,7 @@ const About = () => {
               Bachelor of Humanities - Corazón de María School
             </div>
             <div className="sub-description">
-              Specialization in Software Development
+              High School Diploma
             </div>
             <div className="year">2018</div>
           </div>

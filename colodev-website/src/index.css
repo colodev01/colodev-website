@@ -187,3 +187,27 @@ body {
 .next-btn:hover {
   color: rgba(255, 255, 255, 1); /* Ajusta la transparencia al pasar el cursor */
 }
+
+@media only screen and (max-width: 767px) {
+  .slider-container {
+    position: relative;
+    top: calc(100px + 1em); /* Calcula la posición para que esté debajo del menú navbar */
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    backdrop-filter: brightness(60%);
+    border-radius: 20px;
+    padding: 1em 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    z-index: 9999;
+  }
+  
+  .prev-btn,
+  .next-btn {
+    display: none;
+  }
+}

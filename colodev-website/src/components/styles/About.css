@@ -5,7 +5,7 @@
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr; /* 2 columnas con igual ancho */
-  grid-gap: 20px; /* Espacio entre las celdas */
+  grid-gap: 10px; /* Espacio entre las celdas */
   padding: 20px;
 }
 
@@ -160,4 +160,26 @@
     font-size: 16px;
     font-style: italic;
   }
+
+/* Mantén el CSS original antes de las media queries */
+
+@media screen and (max-width: 767px) {
+  /* Establece la regla para dispositivos con una anchura máxima de 767px, es decir, dispositivos móviles */
+
+  .about-container {
+    grid-template-columns: 1fr; /* Cambia a una sola columna en dispositivos móviles */
+    overflow-y: auto;
+  }
+
+  .roadmap,
+  .courses {
+    width: 100%; /* Ajusta el ancho al 100% en dispositivos móviles */
+  }
+
+  .roadmap {
+    padding-left: 15px; /* Ajusta el relleno izquierdo en dispositivos móviles */
+    padding-right: 15px; /* Ajusta el relleno derecho en dispositivos móviles */
+  }
+}
+
   
