@@ -1,0 +1,99 @@
+/* Slider CSS */
+
+.container {
+  height: 100%;
+  width: 100%;
+  padding: 0;
+}
+
+.slider-wrapper {
+  backdrop-filter: brightness(60%);
+  border-radius: 20px;
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.fixed-width-column {
+  width: calc(100% - 100px);
+}
+
+.slider-content {
+  width: 100%; /* Ocupa todo el ancho disponible */
+  height: 100%; /* Ocupa todo el alto disponible */
+}
+
+/* Styles for slider carousel */
+.slides {
+  height: 100%;
+  width: 400%;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Styles for each slide */
+.slide {
+  flex: 0 0 25%;
+  width: 25%; /* Each slide takes up 25% of the total width */
+  overflow: hidden;
+}
+
+/* Navigation buttons styles */
+.prev-btn,
+.next-btn {
+  top: 50%; /* Position buttons at the center vertically */
+  transform: translateY(-50%); /* Vertically align */
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.5); /* Slightly transparent color */
+  transition: color 0.3s ease; /* Smooth transition */
+  font-size: 2em;
+  height: 60px; /* Desired height */
+  line-height: 3em; /* Vertical alignment of content */
+}
+
+/* Specific style for the previous button */
+.prev-btn {
+  margin-left: 1em;
+  left: 10px; /* Position the previous button to the left */
+}
+
+/* Specific style for the next button */
+.next-btn {
+  margin-right: 1em;
+  right: 10px; /* Position the next button to the right */
+}
+
+/* Change color on hover for the buttons */
+.prev-btn:hover,
+.next-btn:hover {
+  color: rgba(255, 255, 255, 1); /* Adjust transparency on hover */
+}
+
+@media only screen and (max-width: 767px) {
+  .slider-container {
+    position: relative;
+    top: calc(100px + 1em); /* Calculate position to be below the navbar menu */
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    backdrop-filter: brightness(60%);
+    border-radius: 20px;
+    padding: 1em 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    z-index: 9999;
+  }
+
+  .prev-btn,
+  .next-btn {
+    display: none;
+  }
+}

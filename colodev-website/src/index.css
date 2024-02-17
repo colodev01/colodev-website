@@ -111,6 +111,12 @@ blockquote:before, blockquote:after, q:before, q:after {
   src: url(../public/assets/fonts/PixelOperator.ttf);
 }
 
+.App {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Make sure the entire viewport height is covered */
+}
+
 body {
   margin: 0;
   min-height: 100vh;
@@ -125,89 +131,14 @@ body {
   overflow-y: hidden; /* Hide the vertical scrollbar */
 }
 
-/* Slider CSS */
-
-.slider-container {
-  margin: 0em 5em;
-  backdrop-filter: brightness(60%);
-  border-radius: 20px;
-  padding: 1em 1em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 85vh;
-  overflow: hidden;
+.main-wrapper {
+  flex: 1; /* Make the main wrapper grow to fill the remaining space */
+  overflow: hidden; /* Prevent content from overflowing */
+  padding: 0 70px 30px 70px;
 }
 
-/* Estilos para el contenedor de diapositivas */
-.slides {
-  height: 100%;
-  width: 400%; /* Ancho total del contenedor (4 diapositivas en este caso) */
-  transition: transform 0.5s ease-in-out;
-}
-
-/* Estilo para cada diapositiva */
-.slide {
-  flex: 0 0 25%;
-  width: 25%; /* Cada diapositiva ocupa el 25% del ancho total */
-  overflow: hidden;
-}
-
-/* Estilos para los botones de navegación */
-.prev-btn,
-.next-btn {
-  position: absolute; /* Posición absoluta para sacarlos del flujo normal */
-  top: 50%; /* Colocar los botones en el centro verticalmente */
-  transform: translateY(-50%); /* Alinear verticalmente */
-  font-size: 24px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: rgba(255, 255, 255, 0.5); /* Color ligeramente transparente */
-  transition: color 0.3s ease; /* Transición suave */
-  font-size: 2em;
-  height: 60px; /* Altura deseada */
-  line-height: 3em; /* Alineación vertical del contenido */
-}
-
-/* Estilo específico para el botón previo */
-.prev-btn {
-  margin-left: 1em;
-  left: 10px; /* Colocar el botón previo a la izquierda */
-}
-
-/* Estilo específico para el botón siguiente */
-.next-btn {
-  margin-right: 1em;
-  right: 10px; /* Colocar el botón siguiente a la derecha */
-}
-
-/* Cambia el color al pasar el mouse sobre los botones */
-.prev-btn:hover,
-.next-btn:hover {
-  color: rgba(255, 255, 255, 1); /* Ajusta la transparencia al pasar el cursor */
-}
-
-@media only screen and (max-width: 767px) {
-  .slider-container {
-    position: relative;
-    top: calc(100px + 1em); /* Calcula la posición para que esté debajo del menú navbar */
-    left: 0;
-    right: 0;
-    bottom: 0;
-    margin: 0;
-    backdrop-filter: brightness(60%);
-    border-radius: 20px;
-    padding: 1em 1em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    z-index: 9999;
-  }
-  
-  .prev-btn,
-  .next-btn {
-    display: none;
+@media screen and (max-width: 767px) {
+  .main-wrapper{ 
+    padding: 15px 20px;
   }
 }
