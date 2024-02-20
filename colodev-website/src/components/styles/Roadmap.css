@@ -1,0 +1,61 @@
+.roadmap {
+  height: inherit;
+  width: inherit;
+  margin: 15px auto;
+  padding: 0 15px 0 30px;
+  border-left: 2px solid #ccc;
+  animation: slideDown 1s ease forwards; /* Aplica la animación slideDown */
+  opacity: 0; /* Inicialmente, establece la opacidad en 0 */
+}
+
+.roadmap-item {
+  position: relative; /* Añade posición relativa para contener la pelotita */
+  padding: 10px 10px;
+  line-height: 1.7;
+  position: relative;
+  height: 110px;
+  margin-bottom: 20px;
+}
+
+.roadmap-item:before {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #000;
+  border: 3px solid #ddd;
+  position: absolute;
+  top: 25px;
+  left: -1em; /* Ajusta la posición izquierda para alinear con la línea */
+  z-index: 1; /* Asegura que la pelotita esté sobre la línea */
+}
+
+.year {
+  font-family: "Outfit", sans-serif; /* Utiliza la fuente 'Outfit' para las descripciones */
+  color: #fff;
+  font-size: 18px; /* Increase the font size */
+}
+
+.description {
+  font-family: "Outfit", sans-serif; /* Utiliza la fuente 'Outfit' para las descripciones */
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.sub-description {
+  font-family: "Outfit", sans-serif; /* Utiliza la fuente 'Outfit' para las descripciones */
+  font-size: 16px; /* Tamaño de fuente más pequeño */
+  margin-top: 5px; /* Espacio entre la descripción principal y la sub-descripción */
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%); /* Comienza desde arriba */
+    opacity: 0; /* Inicialmente, invisible */
+  }
+  to {
+    transform: translateY(0); /* Termina en su posición original */
+    opacity: 1; /* Se vuelve más opaco al final de la animación */
+  }
+}

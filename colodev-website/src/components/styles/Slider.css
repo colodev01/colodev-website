@@ -18,26 +18,28 @@
 }
 
 .fixed-width-column {
-  width: calc(100% - 100px);
+  box-sizing: content-box;
 }
 
 .slider-content {
-  width: 100%; /* Ocupa todo el ancho disponible */
-  height: 100%; /* Ocupa todo el alto disponible */
+  width: 100%;
+  height: 100%;
+  box-sizing: content-box;
 }
 
-/* Styles for slider carousel */
 .slides {
+  box-sizing: content-box;
   height: 100%;
   width: 400%;
   transition: transform 0.5s ease-in-out;
+  display: flex; /* Utilizar flexbox */
 }
 
-/* Styles for each slide */
 .slide {
   flex: 0 0 25%;
   width: 25%; /* Each slide takes up 25% of the total width */
   overflow: hidden;
+  height: 100%; /* Ocupa el 100% de la altura de los slides */
 }
 
 /* Navigation buttons styles */

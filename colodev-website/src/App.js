@@ -1,5 +1,6 @@
 import { React, useState } from "react";
 import { Slider, Header } from "./components";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import "./App.css";
 
@@ -12,7 +13,15 @@ function App() {
 
   return (
     <div className="App">
-      <Header showSlide={handleSlideChange} />
+      <BrowserRouter>
+        <Header showSlide={handleSlideChange} />
+        <Routes>
+          <Route path="/" />
+          <Route path="/about" />
+          <Route path="/portfolio" />
+          <Route path="/contact" />
+        </Routes>
+      </BrowserRouter>
       <main className="main-wrapper">
         <Slider sliderIndex={currentSlide} />
       </main>

@@ -1,27 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit");
 
-* {
-  box-sizing: border-box;
-}
-
-#contact {
+.contact-wrapper {
+  height: 100%;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.contact-box {
-  width: clamp(100px, 90%, 1000px);
-  margin: 80px 50px;
+.contact-card {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
 }
 
 .contact-links, .contact-form-wrapper {
   width: 50%;
   padding: 8% 5% 10% 5%;
 }
-
 
 .contact-links {
   background-color: #1f2e43;
@@ -48,7 +43,7 @@
 }
 
 .form-item {
-    gap: 10px;
+  gap: 10px;
 }
 
 @media only screen and (max-width: 800px) {
@@ -97,7 +92,6 @@ img {
   width: 45px;
   height: 45px;
   filter: 
-    hue-rotate(220deg)
     drop-shadow(2px 4px 4px #0006);
   transition: 0.2s;
   user-select: none;
@@ -140,7 +134,7 @@ input, textarea {
   border-radius: 4px;
   margin-bottom: 20px;
   padding: 12px;
-  font-size: clamp(15px, 1.5vw, 18px);
+  /* font-size: clamp(15px, 1.5vw, 18px); */
 }
 
 input:focus+label, 
