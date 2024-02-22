@@ -1,6 +1,6 @@
 .courses {
-  height: inherit;
-  width: inherit;
+  height: 100%;
+  width: 100%;
   animation: slideUp 1s ease forwards; /* Aplica la animación slideUp */
   opacity: 0; /* Inicialmente, establece la opacidad en 0 */
 }
@@ -26,18 +26,14 @@
 }
 
 .course-title {
-  font-family: "Outfit", sans-serif;
-  font-size: 20px;
+  font-size: 25px;
   margin-bottom: 5px;
 }
 
 .course-status {
-  font-family: "Outfit", sans-serif;
-  font-size: 16px;
+  font-size: 20px;
   font-style: italic;
 }
-
-
 
 @keyframes slideUp {
   from {

@@ -115,6 +115,7 @@ blockquote:before, blockquote:after, q:before, q:after {
   display: flex;
   flex-direction: column;
   height: 100vh; /* Make sure the entire viewport height is covered */
+  padding: 0px 100px;
 }
 
 body {
@@ -128,13 +129,22 @@ body {
   background-position: center;
   height: 100%;
   width: 100%;
-  overflow-y: hidden; /* Hide the vertical scrollbar */
 }
 
 .main-wrapper {
   flex: 1; /* Make the main wrapper grow to fill the remaining space */
   overflow: hidden; /* Prevent content from overflowing */
-  padding: 0 70px 30px 70px;
+  padding: 0px 0px 30px;
+}
+
+@media screen and (max-width: 962px) {
+  .App{
+    padding: 0px 5px;
+  }
+
+  .main-wrapper{ 
+    padding: 15px 15px;
+  }
 }
 
 @media screen and (max-width: 767px) {

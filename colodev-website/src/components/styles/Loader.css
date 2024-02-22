@@ -1,0 +1,75 @@
+/* Adjust the body styles to ensure the loader is centered and covers the entire viewport */
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to right, silver, teal);
+  position: relative; /* Add this line to position the loader relative to the body */
+  z-index: 9999999999;
+}
+
+/* Ensure that the App component's container doesn't cover the loader */
+.App {
+  /* Add styles to limit the size of the App component */
+  position: relative; /* Ensure the position is relative */
+  z-index: 1; /* Set a lower z-index to make sure it's behind the loader */
+}
+
+/* Loader styles */
+.loader {
+  width: 16em;
+  height: 8em;
+  position: absolute; /* Change position to absolute */
+  top: 50%; /* Position at the center vertically */
+  left: 50%; /* Position at the center horizontally */
+  transform: translate(-50%, -50%); /* Center the loader */
+  overflow: hidden;
+  z-index: 9999; /* Ensure the loader appears above other elements */
+}
+
+.loader span {
+  position: absolute;
+  width: 5%;
+  height: 10%;
+  background-color: white;
+  border-radius: 50%;
+  bottom: 0.2em;
+  left: -5%;
+  animation: 2s linear infinite;
+  transform-origin: 50% -3em;
+  animation-name: run, rotating;
+}
+
+.loader span:nth-child(2) {
+  animation-delay: 0.075s;
+}
+.loader span:nth-child(3) {
+  animation-delay: 0.15s;
+}
+
+@keyframes run {
+  0% {
+    left: -5%;
+  }
+  10%,
+  60% {
+    left: calc((100% - 5%) / 2);
+  }
+  70%,
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes rotating {
+  0%,
+  10% {
+    transform: rotate(0deg);
+  }
+  60%,
+  100% {
+    transform: rotate(-1turn);
+  }
+}

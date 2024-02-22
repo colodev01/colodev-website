@@ -8,7 +8,7 @@
 
 .slider-wrapper {
   backdrop-filter: brightness(60%);
-  border-radius: 20px;
+  border-radius: 15px;
   overflow: hidden;
   height: 100%;
   display: flex;
@@ -33,14 +33,20 @@
   width: 400%;
   transition: transform 0.5s ease-in-out;
   display: flex; /* Utilizar flexbox */
+  transition: transform 0.5s ease-in-out; /* Transición en la propiedad transform */
 }
 
 .slide {
   flex: 0 0 25%;
   width: 25%; /* Each slide takes up 25% of the total width */
-  overflow: hidden;
+  overflow: auto;
   height: 100%; /* Ocupa el 100% de la altura de los slides */
 }
+
+::-webkit-scrollbar {
+  background: none;
+}
+
 
 /* Navigation buttons styles */
 .prev-btn,

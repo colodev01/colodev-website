@@ -1,26 +1,28 @@
 @import url("https://fonts.googleapis.com/css2?family=Outfit");
 
-.about-container {
-  max-height: 100%;
-  box-sizing: content-box;
+.about-wrapper {
+  height: 100%;
+  width: 100%;
+  box-sizing: inherit;
   display: grid;
-  grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
-  gap: 20px; /* Espacio entre elementos */
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5px;
   padding: 15px;
 }
 
 .about-item {
+  height: 100%;
+  width: 100%;
   font-size: 2.5em;
   padding: 20px;
-  overflow-y: auto; /* Agrega scrollbar vertical si el contenido se desborda */
-  max-height: 100%; /* Altura máxima igual a la del contenedor padre */
-  background-color: none;
-  border-radius: 10px;
-  box-sizing: content-box;
+}
+
+h3 {
+  font-size: 1.2em;
 }
 
 @media screen and (max-width: 767px) {
-  .about-container {
+  .about-wrapper {
     grid-template-columns: 1fr; /* Cambiar a una sola columna en pantallas pequeñas */
   }
 
