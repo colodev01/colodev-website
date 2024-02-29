@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Home, About, Portfolio, Contact } from "../views/index";
+import { Home, About, Portfolio, Blog } from "../views/index";
 
 import "./styles/Slider.css";
 
@@ -32,14 +32,10 @@ const Slider = ({ sliderIndex }) => {
           </button>
         </div>
         <div className="slider-content">
-          <div className="slides">
-            <div className="slide">
-              {currentSlide === 0 && <Home />}
-              {currentSlide === 1 && <About />}
-              {currentSlide === 2 && <Portfolio />}
-              {currentSlide === 3 && <Contact />}
-            </div>
-          </div>
+          {currentSlide === 0 && <Home />}
+          {currentSlide === 1 && <About />}
+          {currentSlide === 2 && <Portfolio />}
+          {currentSlide === 3 && <Blog />}
         </div>
         <div className="next-column">
           <button type="button" className="next-btn" onClick={nextSlide}>

@@ -24,23 +24,27 @@
   color: white;
 }
 
+.nav-link {
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #2596be;
+}
+
 .nav-link::after {
   content: '';
   position: absolute;
   bottom: -2px;
   left: 0;
-  width: 0; /* Comienza con una longitud de cero */
-  height: 2px; /* Grosor del subrayado */
-  background-color: #2596be; /* Color de subrayado */
-  transform: scaleX(0);
-  transform-origin: bottom left;
-  transition: all 0.3s ease; /* Transición suave */
+  width: 0;
+  height: 2px;
+  background-color: #2596be;
+  transition: width 0.3s ease;
 }
 
 .nav-link:hover::after {
   width: 100%;
-  transform: scaleX(1);
-  transform-origin: bottom right;
 }
 
 @media (max-width: 768px) {

@@ -81,3 +81,32 @@ export const projects = Object.freeze([
     language: "React" 
   },
 ]);
+
+export const posts = Object.freeze([
+  {
+    id: 1,
+    image: "https://miro.medium.com/v2/resize:fit:1400/1*-j-WDZlgOWP1EjvcMSL13w.jpeg",
+    title: "A Solid Guide to SOLID Principles    ",
+    subtitle: "A simple blog about",
+    url: "https://www.baeldung.com/solid-principles"
+  },
+  {
+    id: 2,
+    image: "https://miro.medium.com/v2/resize:fit:1400/1*-j-WDZlgOWP1EjvcMSL13w.jpeg",
+    title: "A Solid Guide to SOLID Principles    ",
+    subtitle: "A simple blog about",
+    url: "https://www.baeldung.com/solid-principles"
+  },{
+    id: 3,
+    image: "https://miro.medium.com/v2/resize:fit:1400/1*-j-WDZlgOWP1EjvcMSL13w.jpeg",
+    title: "A Solid Guide to SOLID Principles    ",
+    subtitle: "A simple blog about",
+    url: "https://www.baeldung.com/solid-principles"
+  },{
+    id: 4,
+    image: "https://miro.medium.com/v2/resize:fit:1400/1*-j-WDZlgOWP1EjvcMSL13w.jpeg",
+    title: "A Solid Guide to SOLID Principles    ",
+    subtitle: "A simple blog about",
+    url: "https://www.baeldung.com/solid-principles"
+  },
+])

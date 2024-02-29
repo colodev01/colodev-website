@@ -12,12 +12,24 @@ const Home = () => {
     "You know something? I'm a big Spider-Man fan myself.",
     "I'm 23 years old.",
     "My favorite programming language is Python <3",
-    "Follow me on my social networks!"
+    "Follow me on my social networks!",
+    "You can invite me to a meat lovers if you want ;D"
   ];
-
+  
+  // Function to shuffle an array
+  const shuffleArray = (array) => {
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+  };
+  
+  const shuffledMessages = shuffleArray(messages);
+  
   const getRandomMessage = () => {
-    const randomIndex = Math.floor(Math.random() * messages.length);
-    return messages[randomIndex];
+    // Always return the first message from the shuffled array
+    return shuffledMessages[0];
   };
 
   const handleMouseEnter = () => {

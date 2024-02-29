@@ -19,7 +19,7 @@ function App() {
           <Route path="/" />
           <Route path="/about" />
           <Route path="/portfolio" />
-          <Route path="/contact" />
+          <Route path="/blog" />
         </Routes>
       </BrowserRouter>
       <main className="main-wrapper">

@@ -22,6 +22,7 @@
   display: flex;
   justify-items: center;
   border-radius: 50%;
+  aspect-ratio: 4/3;
 }
 
 .speech-bubble {
@@ -119,6 +120,15 @@ h3 {
     align-items: center;
     flex-direction: column; /* Cambia la dirección del flujo a vertical */
     text-align: center; /* Centra el contenido */
+  }
+
+  .speech-bubble {
+    position: relative; /* Resetting position to relative */
+    top: auto; /* Resetting top position */
+    right: auto; /* Resetting right position */
+    left: 50%; /* Centering horizontally */
+    transform: translateX(-50%); /* Centering horizontally */
+    margin-top: 20px; /* Adding margin to create space between image and speech bubble */
   }
 
   .home-welcome {

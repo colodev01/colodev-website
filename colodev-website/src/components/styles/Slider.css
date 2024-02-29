@@ -25,28 +25,12 @@
   width: 100%;
   height: 100%;
   box-sizing: content-box;
-}
-
-.slides {
-  box-sizing: content-box;
-  height: 100%;
-  width: 400%;
-  transition: transform 0.5s ease-in-out;
-  display: flex; /* Utilizar flexbox */
-  transition: transform 0.5s ease-in-out; /* Transición en la propiedad transform */
-}
-
-.slide {
-  flex: 0 0 25%;
-  width: 25%; /* Each slide takes up 25% of the total width */
-  overflow: auto;
-  height: 100%; /* Ocupa el 100% de la altura de los slides */
+  overflow-y: auto;
 }
 
 ::-webkit-scrollbar {
   background: none;
 }
-
 
 /* Navigation buttons styles */
 .prev-btn,
@@ -90,9 +74,9 @@
     right: 0;
     bottom: 0;
     margin: 0;
-    backdrop-filter: brightness(60%);
+    backdrop-filter: brightness(75%);
     border-radius: 20px;
-    padding: 1em 1em;
+    padding: 2em 2em;
     display: flex;
     align-items: center;
     justify-content: center;

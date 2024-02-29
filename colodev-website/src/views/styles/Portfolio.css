@@ -7,10 +7,22 @@
   align-items: center;
 }
 
+@keyframes fadeInFromAbove {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .portfolio-content {
   margin-top: 30px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 30px;
+  animation: fadeInFromAbove 0.5s ease-in-out forwards;
 }
