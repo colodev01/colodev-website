@@ -1,30 +1,41 @@
-import { React, useState } from "react";
+import { React, useState, useEffect } from "react";
 import { Slider, Header } from "./components";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
+import { About, Blog, Home, Portfolio } from "./views";
 
 import "./App.css";
 
 function App() {
-  const [currentSlide, setCurrentSlide] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
 
-  const handleSlideChange = (index) => {
-    setCurrentSlide(index);
-  };
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 900);
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   return (
-    <div className="App">
+    <div className={`App ${isMobile ? "mobile" : ""}`}>
       <BrowserRouter>
-        <Header showSlide={handleSlideChange} />
-        <Routes>
-          <Route path="/" />
-          <Route path="/about" />
-          <Route path="/portfolio" />
-          <Route path="/blog" />
-        </Routes>
+        <Header />
+        <main className={`main-wrapper ${isMobile ? "mobile" : ""}`}>
+          {isMobile ? (
+            <>
+              <Home />
+              <About />
+              <Portfolio />
+              <Blog />
+            </>
+          ) : (
+            <Slider sliderIndex={0}/>
+          )}
+        </main>
       </BrowserRouter>
-      <main className="main-wrapper">
-        <Slider sliderIndex={currentSlide} />
-      </main>
     </div>
   );
 }

@@ -8,8 +8,8 @@ const Blog = () => {
   return (
     <div className="blog-wrapper">
       <div className="blog-content">
-        {posts.map((post) => (
-          <BlogPost post={post} />
+        {posts.map((post, index) => (
+          <BlogPost key={index} post={post} />
         ))}
       </div>
     </div>

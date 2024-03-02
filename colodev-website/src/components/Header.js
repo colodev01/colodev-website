@@ -12,7 +12,7 @@ const Header = ({ showSlide }) => {
 
   const handleButtonClick = (index) => {
     showSlide(index);
-    setMenuOpen(false); // Close the menu after clicking on a button
+    setMenuOpen(!menuOpen); // Toggle the menu state
   };
 
   return (
@@ -21,19 +21,33 @@ const Header = ({ showSlide }) => {
         onClick={toggleMenu}
         className={`header-button ${menuOpen ? "open" : ""}`}
       >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="30"
-          height="30"
-          fill="currentColor"
-          className="bi bi-list"
-          viewBox="0 0 16 16"
-        >
-          <path
-            fillRule="evenodd"
-            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"
-          />
-        </svg>
+        {menuOpen ? (
+          // Render cancel button SVG
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            x="0px"
+            y="0px"
+            width="30"
+            height="30"
+            viewBox="0 0 50 50"
+            fill="white"
+          >
+            <path d="M 10 10 L 40 40 M 40 10 L 10 40" strokeWidth="4" stroke="#fff" strokeLinecap="round" />
+          </svg>
+        ) : (
+          // Render menu button SVG
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            x="0px"
+            y="0px"
+            width="30"
+            height="30"
+            viewBox="0 0 50 50"
+            fill="white"
+          >
+            <path d="M 0 7.5 L 0 12.5 L 50 12.5 L 50 7.5 L 0 7.5 z M 0 22.5 L 0 27.5 L 50 27.5 L 50 22.5 L 0 22.5 z M 0 37.5 L 0 42.5 L 50 42.5 L 50 37.5 L 0 37.5 z"></path>
+          </svg>
+        )}
       </button>
       <nav className={`header-nav ${menuOpen ? "open" : ""}`}>
         <ul className="nav-ul">

@@ -2,31 +2,18 @@
   height: 100%;
   width: 100%;
   display: flex;
+  box-sizing: content-box;
   flex-direction: row;
   justify-content: center;
   align-items: center;
 }
 
 .blog-content {
-  margin-top: 30px;
+  margin: 50px;
   display: grid; /* Change to grid */
   grid-template-columns: repeat(2, 1fr); /* Two columns */
   justify-content: center;
-  gap: 30px;
-}
-
-.blog-post {
-  margin: 2em;
-  border: 1px solid #a624d0;
-  text-align: center;
-}
-
-.blog-post img {
-  max-width: 100%;
-}
-
-.blog-post h2 {
-  color: #a624d0;
+  gap: 50px;
 }
 
 /* Media query for mobile screens */

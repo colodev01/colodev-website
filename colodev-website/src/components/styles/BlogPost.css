@@ -1,0 +1,12 @@
+.blog-post {
+    border: 2px solid #a624d0;
+    background-color: whitesmoke;
+  }
+  
+  .blog-post img {
+    max-width: 100%;
+  }
+  
+  .blog-post h2 {
+    color: #a624d0;
+  }

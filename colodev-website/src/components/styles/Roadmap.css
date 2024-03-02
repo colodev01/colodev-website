@@ -10,16 +10,45 @@
 }
 
 .roadmap-item {
-  background-color: rgb(60, 60, 78);
-  padding-left: 15px;
-  .description {
-    font-size: 0.8em;
-  }
-  .sub-description {
-    font-size: 0.5em;
-  }
-  .year {
-    font-size: 0.5em;
-  }
+  border-top: solid 3px #2596be;
+  background-color: #171920;
+  position: relative;
+  padding: 5px;
+}
 
+.description {
+  font-size: 0.8em;
+}
+
+.sub-description {
+  font-size: 0.5em;
+}
+
+.year {
+  font-size: 0.5em;
+}
+
+.accordion-button {
+  position: absolute;
+  text-align: center;
+  top: 0;
+  right: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2em;
+  color: #2596be; /* Change the color to your desired color */
+}
+
+.accordion-content {
+  background-color: #f1f1f1;
+  padding: 10px;
+  margin-top: 10px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease; /* Smooth transition */
+}
+
+.accordion-content.active {
+  max-height: 200px; /* Adjust height as needed */
 }

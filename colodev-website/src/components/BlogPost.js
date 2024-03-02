@@ -1,5 +1,7 @@
 import React from "react";
 
+import './styles/BlogPost.css';
+
 const BlogPost = ({ post }) => {
   return (
     <div className="blog-post" key={post.id}>

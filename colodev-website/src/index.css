@@ -1,15 +1,5 @@
 @charset "UTF-8";
-/*
 
-  Con este reset vamos a resolver:
-    👉 Unificar el uso de Custom Properties
-    👉 Problemas de box-model más generales
-    👉 Problemas con imagenes, vídeos e iconos svg
-    👉 Problemas con tipografías y etiquetas input en formularios
-    👉 Unificar la tipografía de todas las etiquetas de una web
-
-*/
-/* Aquí definimos las Custom properties */
 :root {
   --negro: #393939;
   /* Tipografía */
@@ -17,7 +7,6 @@
   --tipo-secundaria: Verdana;
 }
 
-/* Las adaptamos al modo oscuro */
 @media (prefers-color-scheme: dark) {
   :root {
     --negro: #ececec;
@@ -111,13 +100,6 @@ blockquote:before, blockquote:after, q:before, q:after {
   src: url(../public/assets/fonts/PixelOperator.ttf);
 }
 
-.App {
-  display: flex;
-  flex-direction: column;
-  height: 100vh; /* Make sure the entire viewport height is covered */
-  padding: 0px 100px;
-}
-
 body {
   margin: 0;
   min-height: 100vh;
@@ -131,24 +113,23 @@ body {
   width: 100%;
 }
 
+.App {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 0px 40px 30px 40px;
+}
+
+.App.mobile {
+  height: auto;
+  padding: 0px;
+}
+
 .main-wrapper {
   flex: 1; /* Make the main wrapper grow to fill the remaining space */
   overflow: hidden; /* Prevent content from overflowing */
-  padding: 0px 0px 30px;
 }
 
-@media screen and (max-width: 962px) {
-  .App{
-    padding: 0px 5px;
-  }
-
-  .main-wrapper{ 
-    padding: 15px 15px;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .main-wrapper{ 
-    padding: 15px 20px;
-  }
+.main-wrapper.mobile {
+  backdrop-filter: blur(10px);
 }
