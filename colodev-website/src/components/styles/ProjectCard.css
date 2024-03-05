@@ -4,7 +4,9 @@
   width: 300px;
   height: 200px;
   border-radius: 10px;
+  transition: transform 0.3s ease, filter 0.3s ease; /* Adding filter transition */
 }
+
 .project-card:hover {
   transform: scale(1.1);
 }
@@ -50,4 +52,33 @@
   font-size: 1.5rem;
   display: flex;
   flex-direction: column;
+}
+
+.project-description {
+  position: absolute;
+  bottom: -100%; /* Initially hidden below the card */
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 10px;
+  transition: bottom 0.3s ease; /* Adding smooth transition for description */
+}
+
+.project-card:hover .project-description {
+  bottom: 0; /* Move description into view on hover */
+}
+
+.project-description p {
+  margin: 0;
+}
+
+.project-description a {
+  color: white;
+  text-decoration: none;
+}
+
+.project-description a:hover {
+  text-decoration: underline;
+  cursor: pointer;
 }

@@ -19,17 +19,18 @@ const About = () => {
         <Roadmap items={jobs} />
       </div>
       <div className="about-item">
-        <h3>Skills</h3>
+        <h3>Hard Skills</h3>
         <SkillList skills={skills} />
       </div>
       <div className="about-item">
-        <h3>Academic Background</h3>
-        <Roadmap items={academics} />
+        <h3>Experience</h3>
+        <Roadmap items={jobs} />
       </div>
       <div className="about-item">
-        <h3>Courses</h3>
-        <CourseList courses={courses} />
+        <h3>Soft Skills</h3>
+        <SkillList skills={skills} />
       </div>
+      
     </div>
   );
 };

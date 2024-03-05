@@ -81,10 +81,10 @@ const Header = ({ showSlide }) => {
           <li className="nav-li">
             <Link
               className="nav-link"
-              to="/blog"
+              to="/contact"
               onClick={() => handleButtonClick(3)}
             >
-              Blog
+              Contact
             </Link>
           </li>
         </ul>

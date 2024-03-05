@@ -66,6 +66,8 @@ const Home = () => {
         <div className="home-detail">
           <h1>Franco Muzzin</h1>
           <h2>Systems Engineer student</h2>
+          <br/>
+          <h3 style={{ textAlign: "center", fontStyle: "italic"}}>"La vida es muy simple para cerrá el orto Martín"</h3>
         </div>
         <div
           className="home-image"

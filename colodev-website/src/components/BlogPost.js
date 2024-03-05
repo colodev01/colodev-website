@@ -9,7 +9,7 @@ const BlogPost = ({ post }) => {
       <h2>{post.title}</h2>
       <h3>{post.subtitle}</h3>
       <button>
-        <a href={post.url}>Read More →</a>
+        <a href={post.url} target="new">Read More →</a>
       </button>
     </div>
   );
