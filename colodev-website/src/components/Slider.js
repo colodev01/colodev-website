@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Home, About, Portfolio, Blog } from "../views/index";
+import { Home, About, Portfolio, Contact } from "../views/index";
 import { Routes, Route, Navigate } from "react-router-dom";
 
 import "./styles/Slider.css";
@@ -48,20 +48,20 @@ const Slider = ({ sliderIndex }) => {
             <Route id={0} path="/home" element={<Home />} />
             <Route id={1} path="/about" element={<About />} />
             <Route id={2} path="/portfolio" element={<Portfolio />} />
-            <Route id={3} path="/blog" element={<Blog />} />
+            <Route id={3} path="/contact" element={<Contact />} />
           </Routes>
           {/* Navigate to the corresponding route based on currentSlide */}
           {currentSlide === 0 && <Navigate to="/home" />}
           {currentSlide === 1 && <Navigate to="/about" />}
           {currentSlide === 2 && <Navigate to="/portfolio" />}
-          {currentSlide === 3 && <Navigate to="/blog" />}
+          {currentSlide === 3 && <Navigate to="/contact" />}
         </div>
         <div className="next-column">
           <button
             type="button"
             className="next-btn"
             onClick={nextSlide}
-            disabled={currentSlide === totalSlides - 1} // Disable button if on the last slide
+            disabled={currentSlide === totalSlides - 1}
           >
             ❯
           </button>

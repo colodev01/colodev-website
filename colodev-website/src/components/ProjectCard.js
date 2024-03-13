@@ -14,7 +14,7 @@ const ProjectCard = ({ image, projectName, language, color, description, repoUrl
         <div className="project-description">
           <p>{description}</p>
           {repoUrl ? (
-            <a href={repoUrl}>Go to repository ➤</a>
+            <a href={repoUrl} target="new">Go to repository ➤</a>
           ) : (
             <p>Private repo 🔒</p>
           )}

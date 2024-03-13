@@ -3,44 +3,10 @@ export const skills = Object.freeze([
   { name: "HTML/CSS", level: 85, color: "#ff5800", abbreviation: "HTML/CSS"},
   { name: "Python (Flask & FastAPI)", level: 75, color: "#3776ab", abbreviation: "Python"},
   { name: "JavaScript (React & Next.js)", level: 70, color: "#f0db4f", abbreviation: "JS"},
+  { name: "Docker", level: 50, color: "#0db7ed", abbreviation: "Docker"},
   { name: "Git", level: 95, color: "#bd2c00", abbreviation: "Git"},
   { name: "SCRUM and Agile Methodology", level: 95, color: "#6cc644", abbreviation: "Scrum"},
-]);
-
-export const courses = Object.freeze([
-  {
-    title: "Universidad de Programación - Python, Java y JavaScript en Udemy.",
-    status: "finished",
-    image: "https://img-c.udemycdn.com/course/240x135/4180612_5b9a_4.jpg",
-  },
-  {
-    title: "The Complete ReactJs Course - Basics to Advanced [2024].",
-    status: "finished",
-    image: "https://img-c.udemycdn.com/course/240x135/3033196_e7f4_3.jpg",
-  },
-  {
-    title: "Flutter - Móvil: De cero a experto.",
-    status: "in progress",
-    image: "https://img-c.udemycdn.com/course/240x135/5132066_04b4_3.jpg",
-  },
-  {
-    title: "Principios SOLID y Clean Code",
-    status: "finished",
-    image: "https://img-c.udemycdn.com/course/240x135/4599580_2b3a_5.jpg"
-  }
-]);
-
-export const academics = Object.freeze([
-    {
-        description: "Information Systems Engineer - UTN FRM",
-        subDescription: "Specialization in Software Development",
-        date: "March 2019 - Now"
-    },
-    {
-        description: "Bachelor of Humanities - Corazón de María School",
-        subDescription: "High School Diploma",
-        date: "2018"
-    },
+  { name: "Flutter (Dart)", level: 50, color: "#0553B1", abbreviation: "Flutter" }
 ]);
 
 export const jobs = Object.freeze([
@@ -87,32 +53,3 @@ export const projects = Object.freeze([
     repoUrl: "https://github.com/colodev01/colodev-website"
   },
 ]);
-
-export const posts = Object.freeze([
-  {
-    id: 1,
-    image: "https://miro.medium.com/v2/resize:fit:1400/1*-j-WDZlgOWP1EjvcMSL13w.jpeg",
-    title: "A Solid Guide to SOLID Principles    ",
-    subtitle: "A simple blog about",
-    url: "https://www.baeldung.com/solid-principles"
-  },
-  {
-    id: 2,
-    image: "https://miro.medium.com/v2/resize:fit:1400/1*-j-WDZlgOWP1EjvcMSL13w.jpeg",
-    title: "A Solid Guide to SOLID Principles    ",
-    subtitle: "A simple blog about",
-    url: "https://www.baeldung.com/solid-principles"
-  },{
-    id: 3,
-    image: "https://miro.medium.com/v2/resize:fit:1400/1*-j-WDZlgOWP1EjvcMSL13w.jpeg",
-    title: "A Solid Guide to SOLID Principles    ",
-    subtitle: "A simple blog about",
-    url: "https://www.baeldung.com/solid-principles"
-  },{
-    id: 4,
-    image: "https://miro.medium.com/v2/resize:fit:1400/1*-j-WDZlgOWP1EjvcMSL13w.jpeg",
-    title: "A Solid Guide to SOLID Principles    ",
-    subtitle: "A simple blog about",
-    url: "https://www.baeldung.com/solid-principles"
-  },
-])

@@ -3,18 +3,74 @@
 .about-wrapper {
   height: 100%;
   width: 100%;
-  box-sizing: inherit;
-  display: grid;
-  grid-template-columns: repeat(2, 2fr);
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
   gap: 5px;
   padding: 15px 20px;
 }
 
 .about-item {
-  height: 100%;
+  height: auto;
   width: 100%;
   font-size: 2.5em;
   padding: 20px;
+}
+
+.about-item__skill-item__soft {
+  margin-top: 25px;
+}
+
+.soft-skills {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 45px;
+  flex-wrap: nowrap; /* Allow items to wrap */
+}
+
+.soft-skills__item {
+  max-width: 80px; /* Allow container to adjust its width based on image width */
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 20px;
+}
+
+.soft-skills__item img {
+  width: 100%; /* Ensure image fills its container */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover;
+  filter: grayscale(100%);
+  transition: filter 0.3s, transform 0.3s;
+}
+
+.soft-skills__item:hover img {
+  filter: grayscale(0%);
+  transform: scale(1.2);
+}
+
+.soft-skills__item::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  top: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 6px 12px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  border-radius: 4px;
+  font-size: 20px;
+  white-space: nowrap;
+  z-index: 999;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.soft-skills__item:hover::after {
+  opacity: 1;
 }
 
 h3 {
@@ -23,11 +79,39 @@ h3 {
 
 @media screen and (max-width: 767px) {
   .about-wrapper {
-    grid-template-columns: 1fr; /* Cambiar a una sola columna en pantallas pequeñas */
+    display: flex;
+    flex-direction: column;
   }
 
   .about-item {
     width: 100%; /* Establecer ancho del elemento al 100% en pantallas pequeñas */
     margin-bottom: 20px; /* Agregar margen entre elementos en pantallas pequeñas */
   }
+
+  h3 {
+    text-align: center;
+  }
+  
+  .soft-skills {
+    gap: 5px
+  }
+
+  .soft-skills__item {
+    position: relative;
+    display: inline-flex; /* Utiliza flexbox para alinear los elementos en línea */
+    align-items: center; /* Centra verticalmente los elementos */
+    width: calc(33.33% - 20px); /* 33.33% width with margin accounted for */
+  }
+
+  .soft-skills__item img {
+    width: 50px;
+    height: 50px;
+    filter: grayscale(100%); /* Mantener las imágenes en escala de grises por defecto */
+    transition: filter 0.3s, transform 0.3s; /* Agregar transiciones suaves */
+  }
+
+  .soft-skills__item::after {
+    font-size: 18px;
+  }
+
 }

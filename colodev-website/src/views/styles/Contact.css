@@ -1,0 +1,98 @@
+.contact-wrapper {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-links {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 75px;
+  animation: fadeInFromAbove 0.5s ease-in-out forwards;
+}
+
+.link-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease; /* Agrega una transición suave */
+  position: relative;
+}
+
+.link-item:hover::after {
+  content: attr(
+    data-tooltip
+  ); /* Usa el valor del atributo 'data-tooltip' como contenido del tooltip */
+  position: absolute;
+  top: 100%;
+  bottom: auto; /* Coloca el tooltip arriba del elemento */
+  left: 50%; /* Centra el tooltip horizontalmente */
+  transform: translateX(-50%);
+  padding: 6px 12px; /* Ajusta el espaciado interno */
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  border-radius: 4px;
+  font-size: 14px;
+  white-space: nowrap; /* Evita que el tooltip se rompa en varias líneas */
+  z-index: 999; /* Asegúrate de que el tooltip esté en la parte superior */
+}
+
+.link-item:hover {
+  transform: scale(1.5);
+  cursor: pointer;
+}
+
+.link-item svg {
+  width: auto; /* Para ocupar todo el espacio del contenedor */
+  height: auto; /* Para mantener la proporción */
+}
+
+.button-download {
+  background-color: #544c4a;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-family: inherit;
+  font-size: 25px;
+  border-radius: 30px;
+  margin-top: 70px;
+}
+
+.button-download:hover {
+  transform: scale(1.05);
+  background-color: #97978f;
+  cursor: pointer;
+}
+
+@keyframes fadeInFromAbove {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 900px) {
+  .home-links {
+    position: relative;
+    margin-top: 20px;
+    gap: 60px;
+  }
+
+  h1 {
+    font-size: 5em;
+  }
+
+  h2 {
+    font-size: 2em;
+  }
+  
+}

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Slider, Header } from "./components";
 import { BrowserRouter } from "react-router-dom";
-import { About, Blog, Home, Portfolio } from "./views";
+import { About, Contact, Home, Portfolio } from "./views";
 
 import "./App.css";
 
@@ -47,7 +47,7 @@ function App() {
               <Home />
               <About />
               <Portfolio />
-              <Blog />
+              <Contact />
             </>
           ) : (
             <Slider sliderIndex={0} />

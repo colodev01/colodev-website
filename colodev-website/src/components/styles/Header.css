@@ -36,16 +36,16 @@
   content: '';
   position: absolute;
   bottom: -2px;
-  right: 100%; /* Set the initial position to the right */
+  left: 0; /* Set the initial position to the left */
   width: 0;
   height: 2px;
   background-color: #2596be;
-  transition: width 0.3s ease, right 0.3s ease; /* Transition right property */
+  transition: width 0.3s ease, left 0.3s ease; /* Transition left property */
 }
 
 .nav-link:hover::after {
   width: 100%;
-  right: 0; /* Expand towards the left */
+  left: 0; /* Expand towards the right */
 }
 
 @media (max-width: 900px) {
