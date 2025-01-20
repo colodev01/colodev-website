@@ -1,0 +1,37 @@
+.title {
+    font-size: 5vw;
+}
+
+.typing-animation {
+    font-size: 1.5rem; /* Tamaño del texto */
+    font-weight: 500;
+    color: #1abc9c;
+    display: inline-block;
+    position: relative;
+    height: 2rem; /* Mantener altura fija */
+    overflow: hidden; /* Evitar que el texto desborde */
+    white-space: nowrap; /* Evitar que el texto haga salto de línea */
+  }
+  
+  /* Cursor parpadeante */
+  .typing-animation::after {
+    content: "|"; /* El cursor */
+    font-weight: bold;
+    color: #1abc9c;
+    animation: blink 0.8s steps(2, start) infinite;
+    position: relative;
+    right: 5px; /* Siempre al final del texto */
+  }
+  
+  @keyframes blink {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
