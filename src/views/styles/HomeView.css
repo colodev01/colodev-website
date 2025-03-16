@@ -1,3 +1,7 @@
+.home-wrapper {
+  flex: 1;
+}
+
 .title {
     font-size: 5vw;
 }
@@ -5,7 +9,6 @@
 .typing-animation {
     font-size: 1.5rem; /* Tamaño del texto */
     font-weight: 500;
-    color: #1abc9c;
     display: inline-block;
     position: relative;
     height: 2rem; /* Mantener altura fija */

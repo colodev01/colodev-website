@@ -1,35 +1,15 @@
 import React from 'react';
-import { FaUser, FaBriefcase, FaProjectDiagram, FaEnvelope } from 'react-icons/fa'; // Ejemplo de íconos
 import './styles/Navbar.css';
 
 function Navbar() {
   return (
     <nav className="navbar">
+      <div className="logo">MyLogo</div>
       <ul>
-        <li>
-          <a href="#about">
-            <FaUser className="icon" />
-            <span className="tooltip">About</span>
-          </a>
-        </li>
-        <li>
-          <a href="#experience">
-            <FaBriefcase className="icon" />
-            <span className="tooltip">Experience</span>
-          </a>
-        </li>
-        <li>
-          <a href="#projects">
-            <FaProjectDiagram className="icon" />
-            <span className="tooltip">Projects</span>
-          </a>
-        </li>
-        <li>
-          <a href="#contact">
-            <FaEnvelope className="icon" />
-            <span className="tooltip">Contact</span>
-          </a>
-        </li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
   );
