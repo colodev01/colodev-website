@@ -4,46 +4,43 @@ import "./styles/HomeView.css";
 const HomeView = () => {
   const roles = [
     "Informations Systems Engineer",
-    "Data Analyst",
+    "Data Engineer",
     "Full Stack Developer",
-    "Spider-Man fan",
+    "Spider-Man fan <3",
   ];
 
   const [currentRole, setCurrentRole] = useState("|");
   const [index, setIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
   const [deleting, setDeleting] = useState(false);
-  const [pause, setPause] = useState(false); // Nueva pausa
+  const [pause, setPause] = useState(false);
 
   useEffect(() => {
-    const typingSpeed = deleting ? 50 : 100; // Velocidad de tipeo
-    const pauseTime = 1500; // Pausa al final del texto
-    const endPauseTime = 2000; // Pausa adicional cuando termina de escribir
+    const typingSpeed = deleting ? 50 : 100;
+    const pauseTime = 1500;
+    const endPauseTime = 2000;
 
     if (pause) {
-      // Pausa al final antes de borrar
       const pauseTimeout = setTimeout(() => setPause(false), endPauseTime);
       return () => clearTimeout(pauseTimeout);
     }
 
     const timeout = setTimeout(() => {
       if (deleting) {
-        // Borrando el texto
         if (charIndex > 0) {
           setCharIndex((prev) => prev - 1);
           setCurrentRole(roles[index].substring(0, charIndex - 1));
         } else {
           setDeleting(false);
-          setIndex((prev) => (prev + 1) % roles.length); // Avanzar al siguiente rol
+          setIndex((prev) => (prev + 1) % roles.length);
         }
       } else {
-        // Escribiendo el texto
         if (charIndex < roles[index].length) {
           setCharIndex((prev) => prev + 1);
           setCurrentRole(roles[index].substring(0, charIndex + 1));
         } else {
-          setPause(true); // Activar pausa al final
-          setDeleting(true); // Cambiar a modo "borrar" después de la pausa
+          setPause(true);
+          setDeleting(true);
         }
       }
     }, pause ? endPauseTime : deleting && charIndex === 0 ? pauseTime : typingSpeed);
@@ -53,8 +50,17 @@ const HomeView = () => {
 
   return (
     <div className="home-wrapper">
-      <h1 className="title">Hi, I'm Franco</h1>
-      <h3 className="typing-animation">{currentRole}</h3>
+      <div className="home-content">
+        <div className="home-text">
+          <h1 className="title">
+            Hi! I'm <span className="highlight-name">Franco</span>
+          </h1>
+          <h3 className="typing-animation">{currentRole}</h3>
+        </div>
+        <div className="home-image">
+          <img src="/images/colo-saluting.png" alt="Franco Saluting" />
+        </div>
+      </div>
     </div>
   );
 };
