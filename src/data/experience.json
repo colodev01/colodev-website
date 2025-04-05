@@ -1,0 +1,27 @@
+[
+  {
+    "company": "Seidor Analytics S.A.",
+    "logo": "/images/logos/seidor-logo.png",
+    "role": "Data Engineer",
+    "time": "Jul 2024 - Now",
+    "description": "Data ETL and data analysis. Migrated from SAP to Azure Databricks.",
+    "technologies": ["Azure Data Factory", "Databricks", "SQL", "SAP"]
+  },
+
+  {
+    "company": "Midas Consultores",
+    "logo": "/images/logos/midas-logo.png",
+    "role": "Fullstack Developer",
+    "time": "Oct 2023 - Apr 2024",
+    "description": "Developed fuctional and visual modules in a QAS project.",
+    "technologies": ["Java", "Spring Boot", "ReactJS", "NextJS", "Docker"]
+  },
+  {
+    "company": "Aden Business School",
+    "logo": "/images/logos/aden-logo.png",
+    "role": "Backend Developer",
+    "time": "Jul 2022 - Dec 2022",
+    "description": "Odoo ERP management and development of custom modules. API development.",
+    "technologies": ["Python", "Flask", "PostgreSQL", "Odoo"]
+  }
+]

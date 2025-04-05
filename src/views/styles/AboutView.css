@@ -1,0 +1,120 @@
+.about-view-wrapper {
+  text-align: center;
+  padding: 20px;
+}
+
+.about-view-title {
+  text-align: center;
+  font-size: 2rem;  
+}
+
+.cards-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 80px;
+}
+
+.card {
+  position: relative;
+  width: 250px;
+  height: 350px;
+  background: #222;
+  color: white;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly; /* Distribuye los elementos de manera uniforme */
+  font-size: 1rem;
+  font-weight: bold;
+  overflow: hidden;
+  border: 4px solid transparent;
+  
+  /* Animación de entrada */
+  opacity: 0;
+  transform: translateY(-30px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out, border-color 0.3s ease-in-out;
+}
+
+/* Colores de borde */
+.card:nth-child(1) { border-color: #ff5733; } /* Rojo/Naranja */
+.card:nth-child(2) { border-color: #33c4ff; } /* Azul */
+.card:nth-child(3) { border-color: #33ff77; } /* Verde */
+
+.card.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Ícono */
+.card-icon {
+  width: 60px;
+  height: 60px;
+  background: white;
+  color: #222;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+/* Título con altura fija */
+.card-title {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  min-height: 30px;
+  flex-shrink: 0;
+}
+
+/* Descripción con altura fija */
+.card-description {
+  font-size: 18px;
+  font-weight: normal;
+  font-style: italic;
+  text-align: center;
+  padding: 0 10px;
+  min-height: 50px; /* Asegura que todas las tarjetas tengan la misma altura para el texto */
+  flex-shrink: 0;
+}
+
+/* Efecto de reflejo y agrandamiento */
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card .shine {
+  position: absolute;
+  top: -100%;
+  left: -100%;
+  width: 150%;
+  height: 150%;
+  background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  transform: rotate(25deg);
+  transition: transform 0.5s ease-in-out;
+}
+
+.card:hover .shine {
+  top: 0;
+  left: 0;
+  transform: rotate(25deg) translate(200%, 200%);
+}
+
+.tech-icons-container {
+  margin-top: 80px;
+}
+
+.tech-icons-content {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.tech-icon:hover {
+  transform: scale(1.3);
+}
+
