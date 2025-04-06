@@ -17,9 +17,7 @@ function App() {
           <AboutView />
           <ExperienceView />
           <ProjectsView />
-        <section id="contact">
           <ContactView />
-        </section>
       </div>
     </>
   );
