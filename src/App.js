@@ -14,15 +14,9 @@ function App() {
       <Navbar />
       <div className="content">
           <HomeView />
-        <section id="about">
           <AboutView />
-        </section>
-        <section id="experience">
           <ExperienceView />
-        </section>
-        <section id="projects">
           <ProjectsView />
-        </section>
         <section id="contact">
           <ContactView />
         </section>

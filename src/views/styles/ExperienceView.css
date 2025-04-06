@@ -1,102 +1,106 @@
-.experience-container {
-    padding: 1rem;
-  }
-  
-  .experience-title {
-    text-align: center;
-    font-size: 2rem;
-    font-weight: bold;
-    margin-bottom: 3rem;
-  }
-  
-  .timeline {
-    position: relative;
-    width: 80%;
-    margin: auto;
-    max-width: 1900px;
-  }
-  
-  .experience-card-wrapper {
-    position: relative;
-    padding-left: 2.5rem;
-    padding-bottom: 2.5rem;
-  }
-  
-  .timeline-line {
-    position: absolute;
-    left: 1rem;
-    top: 0;
-    height: 100%;
-    border-left: 2px solid #1abc9c;
-  }
-  
-  .timeline-dot {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 50px;
-    height: 50px;
-    border-radius: 9999px;
-    background-color: white;
-    border: 2px solid #1abc9c;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-  }
-  
-  .timeline-dot img {
-    width: 1.5rem;
-    height: 1.5rem;
-    object-fit: contain;
-  }
-  
-  .experience-card {
-    margin-left: 1.5rem;
-    padding: 1rem;
-    background-color: #222;
-    border: 1px solid #e5e7eb;
-    border-radius: 0.75rem;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
-  }
-  
-  .experience-role {
-    font-size: 1.125rem;
-    font-weight: 600;
-    color: white;
-  }
-  
-  .experience-company {
-    font-size: 0.875rem;
-    font-style: italic;
-    color: #999b9e;
-    margin-bottom: 10px;
-  }
+.experience-wrapper {
+  width: 100%;
+}
 
-  .experience-time {
-    font-size: 0.75rem;
-    font-style: italic;
-    color: #999b9e;
-    margin-bottom: 15px;
-  }
-  
-  .experience-description {
-    font-size: 0.85rem;
-  }
-  
-  .experience-tags {
-    margin-top: 25px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-  }
-  
-  .experience-tag {
-    background-color: #dbeafe; /* blue-100 */
-    color: #1e40af; /* blue-800 */
-    font-size: 0.75rem;
-    font-weight: 500;
-    padding: 0.25rem 0.5rem;
-    border-radius: 9999px;
-  }
-  
+.experience-content {
+  width: 80%;
+  margin: auto;
+}
+
+.experience-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 3rem;
+}
+
+.timeline {
+  position: relative;
+  width: 80%;
+  margin: auto;
+  max-width: 1900px;
+}
+
+.experience-card-wrapper {
+  position: relative;
+  padding-left: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+.timeline-line {
+  position: absolute;
+  left: 1rem;
+  top: 0;
+  height: 100%;
+  border-left: 2px solid #1abc9c;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 9999px;
+  background-color: white;
+  border: 2px solid #1abc9c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.timeline-dot img {
+  width: 1.5rem;
+  height: 1.5rem;
+  object-fit: contain;
+}
+
+.experience-card {
+  margin-left: 1.5rem;
+  padding: 1rem;
+  background-color: #222;
+  border: 1px solid #e5e7eb;
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.experience-role {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: white;
+}
+
+.experience-company {
+  font-size: 0.875rem;
+  font-style: italic;
+  color: #999b9e;
+  margin-bottom: 10px;
+}
+
+.experience-time {
+  font-size: 0.75rem;
+  font-style: italic;
+  color: #999b9e;
+  margin-bottom: 15px;
+}
+
+.experience-description {
+  font-size: 0.85rem;
+}
+
+.experience-tags {
+  margin-top: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.experience-tag {
+  background-color: #dbeafe; /* blue-100 */
+  color: #1e40af; /* blue-800 */
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0.25rem 0.5rem;
+  border-radius: 9999px;
+}

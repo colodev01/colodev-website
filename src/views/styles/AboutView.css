@@ -1,6 +1,11 @@
 .about-view-wrapper {
   text-align: center;
-  padding: 20px;
+  width: 100%;
+}
+
+.about-view-content {
+  width: 80%;
+  margin: auto;
 }
 
 .about-view-title {

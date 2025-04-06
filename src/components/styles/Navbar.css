@@ -1,6 +1,8 @@
 /* <<<<<<< Navbar Wrapper >>>>>> */
 .navbar-wrapper {
     width: 100%;
+    position: fixed;
+    z-index: 9999;
     background-color: #0b0a10;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
     border-bottom: 5px solid #1abc9c;

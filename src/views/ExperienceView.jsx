@@ -26,14 +26,16 @@ const ExperienceCard = ({ exp }) => (
 
 const ExperienceView = () => {
   return (
-    <div className="experience-container">
-      <h2 className="experience-title">Experience</h2>
-      <div className="timeline">
-        {experiences.map((exp, idx) => (
-          <ExperienceCard exp={exp} key={idx} />
-        ))}
+    <section id="experience" className="experience-wrapper">
+      <div className="experience-content">
+        <h2 className="experience-title">Experience</h2>
+        <div className="timeline">
+          {experiences.map((exp, idx) => (
+            <ExperienceCard exp={exp} key={idx} />
+          ))}
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 

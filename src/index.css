@@ -15,6 +15,12 @@ html, body {
     flex-direction: column;
 }
 
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 200px;
+}
+
 
 /* Ajuste para móviles */
 @media (max-width: 768px) {
