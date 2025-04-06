@@ -49,7 +49,7 @@ const HomeView = () => {
   }, [charIndex, deleting, roles, index, pause]);
 
   return (
-    <div className="home-wrapper">
+    <section id="home" className="home-wrapper">
       <div className="home-content">
         <div className="home-text">
           <h1 className="title">
@@ -61,7 +61,7 @@ const HomeView = () => {
           <img src="/images/colo-saluting.png" alt="Franco Saluting" />
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

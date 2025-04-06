@@ -11,6 +11,9 @@
   
   .timeline {
     position: relative;
+    width: 80%;
+    margin: auto;
+    max-width: 1900px;
   }
   
   .experience-card-wrapper {

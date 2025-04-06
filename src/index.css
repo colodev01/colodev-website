@@ -15,24 +15,6 @@ html, body {
     flex-direction: column;
 }
 
-/* <<<<<<<< App Wrapper >>>>>>> */
-.App {
-    display: grid;
-    grid-template-columns: 1fr 5fr 1fr;
-    width: 100%;
-}
-
-/* <<<<<<<< Contenido Principal >>>>>>> */
-.content {
-    grid-column: 2 / 3;
-    margin-top: 80px;
-    padding: 20px 0;
-}
-
-/* <<<<<<<< Secciones >>>>>>> */
-section {
-    padding: 50px 0;
-}
 
 /* Ajuste para móviles */
 @media (max-width: 768px) {

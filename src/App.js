@@ -10,12 +10,10 @@ import {
 
 function App() {
   return (
-    <div className="App">
+    <>
       <Navbar />
       <div className="content">
-        <section id="home">
           <HomeView />
-        </section>
         <section id="about">
           <AboutView />
         </section>
@@ -29,7 +27,7 @@ function App() {
           <ContactView />
         </section>
       </div>
-    </div>
+    </>
   );
 }
 
