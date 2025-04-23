@@ -10,24 +10,32 @@ import {
   FaPython,
   FaJava,
 } from "react-icons/fa";
+import { FaGear } from "react-icons/fa6";
+
+const iconsSize = 50;
 
 const cardsData = [
   {
-    icon: <FaUser />,
-    title: "About Me",
-    description: "Information Systems Engineer from Mendoza, Argentina.",
+    icon: <FaUser size={iconsSize}/>,
+    title: "Who am I",
+    description: "Engineer from Mendoza passionate about building smooth, user-first apps.",
   },
   {
-    icon: <FaCode />,
-    title: "My Hobbies",
-    description: "Drawing, calisthenics and playing video games.",
+    icon: <FaCode size={iconsSize}/>,
+    title: "What I do",
+    description: "Full-stack dev with React, Node.js & Python. I love clean code & creative UI.",
   },
   {
-    icon: <FaRocket />,
-    title: "My Goals",
+    icon: <FaRocket size={iconsSize}/>,
+    title: "My Vision",
     description:
-      "Building innovative and scalable applications. Create solutions.",
+      "To build meaningful, scalable solutions and grow through collaboration.",
   },
+  {
+    icon: <FaGear size={iconsSize}/>,
+    title: "How I Work",
+    description: "Agile mindset, test-driven, team-focused. Always learning. Always shipping.",
+  }
 ];
 
 const AboutView = () => {
