@@ -10,12 +10,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 0;
-    width: 80%;
+    padding: 1rem 0;
+    width: 82%;
 }
 
 .logo {
-    font-size: 47px;
+    font-size: 1.6rem;
     font-weight: bold;
     font-family: 'Poppins', sans-serif;
     text-decoration: none;
@@ -43,22 +43,24 @@
     padding: 0;
     margin: 0;
     display: flex;
-    gap: 30px;
+    gap: 0.4rem;
 }
 
 .navbar li {
     position: relative;
 }
-.navbar li a {
-    margin-right: 40px;
-}
 
 .navbar a {
     text-decoration: none;
     color: white;
-    font-weight: 600;   
+    font-weight: 600;
     position: relative;
     transition: color 0.3s ease;
+}
+
+.navbar li a {
+    margin-right: 40px;
+    font-size: 0.9rem;
 }
 
 .navbar a::after {

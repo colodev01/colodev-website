@@ -14,8 +14,7 @@ const HomeView = () => {
               <span className="sub-title">Information Systems Engineer</span>
             </h2>
             <p className="description">
-              I build fullstack software solutions and explore how to integrate
-              Web3 into the digital future.
+              I create software with precision, purpose, and imagination.
             </p>
             <div className="home-buttons">
               <button className="download-cv-button">Download CV</button>
@@ -25,7 +24,7 @@ const HomeView = () => {
         </div>
 
         <div className="home-image">
-          <img src="/images/profile-picture.jpg" alt="Franco Picture" />
+          <img src="/images/colo-dummy.png" alt="Franco Picture" />
         </div>
       </div>
     </section>
