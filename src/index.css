@@ -1,34 +1,47 @@
+:root {
+  --bg-color: #fbfbf9;
+  --text-color: #18181c;
+  --accent-color: #00c9db;
+  --font-size: 25px;
+  --font-family: 'Space Grotesk', sans-serif;
+}
+
+[data-theme="dark"] {
+  --bg-color: #18181c;
+  --text-color: #fbfbf9;
+  --accent-color: #00f5d4;
+}
+
 * {
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 25px;
-    color: #f5fefd;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  color: var(--text-color);
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 html, body {
-    background-color: #18181c;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
+  background-color: var(--bg-color);
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .content {
-    display: flex;
-    flex-direction: column;
-    gap: 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 200px;
 }
-
 
 /* Ajuste para móviles */
 @media (max-width: 768px) {
-    .App {
-        grid-template-columns: 1fr 5fr 1fr;
-    }
+  .App {
+    grid-template-columns: 1fr 5fr 1fr;
+  }
 
-    .content {
-        margin-top: 100px;
-    }
+  .content {
+    margin-top: 100px;
+  }
 }

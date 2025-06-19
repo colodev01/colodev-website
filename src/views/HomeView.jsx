@@ -10,9 +10,9 @@ const HomeView = () => {
             <h1 className="title">
               Hi! I'm <span className="highlight-name">Franco</span>
             </h1>
-            <h2>
-              <span className="sub-title">Information Systems Engineer</span>
-            </h2>
+            <div className="subtitle-container">
+              <span className="subtitle-text">Information Systems Engineer</span>
+            </div>
             <p className="description">
               I create software with precision, purpose, and imagination.
             </p>
@@ -24,7 +24,7 @@ const HomeView = () => {
         </div>
 
         <div className="home-image">
-          <img src="/images/colo-dummy.png" alt="Franco Picture" />
+          <img src="/images/franco-home.png" alt="Franco Picture" />
         </div>
       </div>
     </section>

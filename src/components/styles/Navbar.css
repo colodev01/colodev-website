@@ -2,7 +2,7 @@
     width: 100%;
     position: fixed;
     z-index: 9999;
-    background-color: #18181c;
+    background-color: var(--bg-color);
 }
 
 .navbar {
@@ -14,17 +14,27 @@
     width: 82%;
 }
 
+.navbar_left-side {
+  display: flex;
+  align-items: center;
+  gap: 1rem; /* o margin-left en el botón si preferís más control */
+}
+
 .logo {
     font-size: 1.6rem;
     font-weight: bold;
     font-family: 'Poppins', sans-serif;
     text-decoration: none;
-    color: white;
     transition: transform 0.3s ease, color 0.3s ease;
 }
 
+.logo,
+.navbar a {
+  color: var(--text-color); /* Color dinámico según modo */
+}
+
 .highlight {
-    color: #1abc9c;
+  color: #1abc9c; /* El verdecito */
 }
 
 .logo:hover {
@@ -52,7 +62,6 @@
 
 .navbar a {
     text-decoration: none;
-    color: white;
     font-weight: 600;
     position: relative;
     transition: color 0.3s ease;
@@ -81,6 +90,20 @@
 .navbar a:hover::after {
     width: 100%;
     left: 0;
+}
+
+.theme-button {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-left: 1rem;
+  transition: transform 0.2s;
+  color: var(--text-color);
+}
+
+.theme-button:hover {
+  transform: scale(1.2);
 }
 
 /* Ajuste para móviles */

@@ -11,7 +11,7 @@
 
 .experience-title {
   text-align: center;
-  font-size: 2.5rem;
+  font-size: 1.8rem;
   font-weight: bold;
   margin-bottom: 2.5rem;
   color: white;
@@ -40,12 +40,11 @@
 }
 
 .experience-card-modern {
-  min-width: 300px;
-  max-width: 350px;
+  width: 12.5rem;
   background-color: #1e293b;
   border-radius: 1rem;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
-  padding: 1.5rem;
+  padding: 1.3rem;
   scroll-snap-align: start;
   display: flex;
   flex-direction: column;
@@ -75,21 +74,21 @@
 }
 
 .experience-role {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 600;
   margin-bottom: 0.25rem;
 }
 
 .experience-company,
 .experience-time {
-  font-size: 0.85rem;
+  font-size: 0.72rem;
   color: #94a3b8;
   font-style: italic;
 }
 
 .experience-description {
   margin-top: 0.75rem;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   color: #e2e8f0;
 }
 
@@ -103,7 +102,7 @@
 .experience-tag {
   background-color: #1abc9c;
   color: #0f172a;
-  font-size: 0.7rem;
+  font-size: 0.55rem;
   font-weight: 500;
   padding: 0.25rem 0.6rem;
   border-radius: 9999px;
