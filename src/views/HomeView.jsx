@@ -7,17 +7,19 @@ const HomeView = () => {
       <div className="home-content">
         <div className="home-info">
           <div className="home-text">
-            <h1 className="home-title">
-              Hi! I'm <span className="highlight-name">Franco</span>
-            </h1>
-            <div className="subtitle-container">
-              <span className="subtitle-text">
-                Information Systems Engineer
-              </span>
+            <div className="text-group">
+              <h1 className="home-title">
+                Hi! I'm <span className="highlight-name">Franco</span>
+              </h1>
+              <div className="subtitle-container">
+                <span className="subtitle-text">
+                  Information Systems Engineer
+                </span>
+              </div>
+              <p className="description">
+                I create software with precision, purpose, and imagination.
+              </p>
             </div>
-            <p className="description">
-              I create software with precision, purpose, and imagination.
-            </p>
             <div className="home-buttons">
               <button className="download-cv-button">Download CV</button>
               <button className="contact-me-button">Contact Me</button>
@@ -26,7 +28,7 @@ const HomeView = () => {
         </div>
 
         <div className="home-image">
-            <img src="/images/franco-home.png" alt="Franco Picture" />
+          <img src="/images/franco-home.png" alt="Franco Picture" />
         </div>
       </div>
     </section>

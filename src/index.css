@@ -4,12 +4,19 @@
   --accent-color: #00c9db;
   --font-size: 1.55rem;
   --font-family: 'Space Grotesk', sans-serif;
+  --btn-shadow-color: rgba(0, 0, 0, 0.5); /* sombra negra para modo claro */
+
+  /* Variables para móvil */
+  --font-size-mobile: 1.2rem;
+  --title-font-size-mobile: 1.5rem;
+  --gap-mobile: 1.5rem;
 }
 
 [data-theme="dark"] {
   --bg-color: #18181c;
   --text-color: #fbfbf9;
   --accent-color: #00f5d4;
+  --btn-shadow-color: rgba(255, 255, 255, 0.15); /* sombra blanca tenue para modo oscuro */
 }
 
 * {
@@ -27,6 +34,7 @@ html, body {
   height: 100vh;
   display: flex;
   flex-direction: column;
+  scroll-behavior: smooth;
 }
 
 .content {
@@ -86,14 +94,40 @@ html, body {
   animation-delay: 0.3s;
 }
 
-
-/* Ajuste para móviles */
+/* Ajustes para móviles */
 @media (max-width: 768px) {
+
+  :root {
+    /* Reducimos tamaño de fuente para mejorar legibilidad en móvil */
+    --font-size: var(--font-size-mobile);
+  }
+
   .App {
-    grid-template-columns: 1fr 5fr 1fr;
+    grid-template-columns: 1fr 3fr 1fr; /* Más compacto */
   }
 
   .content {
-    margin-top: 100px;
+    margin-top: 80px;
+    gap: var(--gap-mobile);
+    padding: 0 1rem;
+  }
+
+  .title {
+    font-size: var(--title-font-size-mobile);
+    text-align: center; /* Mejor centrado para pantallas pequeñas */
+  }
+
+  .animated-title {
+    animation: slideInLeft 0.8s ease-out forwards;
+  }
+
+  .divider,
+  .animated-divider {
+    margin: 0.75rem auto;
+    width: 80%;
+  }
+
+  .animated-divider {
+    animation-delay: 0.2s;
   }
 }
