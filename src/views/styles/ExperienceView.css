@@ -1,20 +1,13 @@
 .experience-wrapper {
   width: 100%;
-  background-color: #0f172a; 
+  background-color: var(--bg-color); 
   padding: 4rem 0;
 }
 
 .experience-content {
-  width: 90%;
+  width: 80%;
   margin: auto;
-}
-
-.experience-title {
-  text-align: center;
-  font-size: 1.8rem;
-  font-weight: bold;
-  margin-bottom: 2.5rem;
-  color: white;
+  padding-top: ;
 }
 
 .experience-cards-scroll {

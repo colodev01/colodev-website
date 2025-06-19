@@ -2,7 +2,7 @@
   --bg-color: #fbfbf9;
   --text-color: #18181c;
   --accent-color: #00c9db;
-  --font-size: 25px;
+  --font-size: 1.55rem;
   --font-family: 'Space Grotesk', sans-serif;
 }
 
@@ -34,6 +34,58 @@ html, body {
   flex-direction: column;
   gap: 200px;
 }
+
+/* Title and divider line */
+@keyframes growLine {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+  to {
+    width: 100%;
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
+  text-align: left;
+}
+
+.animated-title {
+  opacity: 0;
+  transform: translateX(-50px);
+  animation: slideInLeft 0.8s ease-out forwards;
+}
+
+.divider,
+.animated-divider {
+  height: 0.12rem;
+  background-color: var(--text-color);
+  border-radius: 2px;
+  margin: 1rem 0;
+}
+
+.animated-divider {
+  width: 0;
+  animation: growLine 1s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
 
 /* Ajuste para móviles */
 @media (max-width: 768px) {

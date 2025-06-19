@@ -27,7 +27,8 @@ const ProjectsView = () => {
     <section id="projects">
       <div className="projects-wrapper">
         <div className="projects-content">
-          <h2 className="projects-title">Projects</h2>
+          <h2 className="title animated-title">Projects</h2>
+          <div className="divider animated-divider"></div>
           <div className="projects-grid">
             {projects.map((project) => (
               <div

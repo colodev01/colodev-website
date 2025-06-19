@@ -1,14 +1,10 @@
 import React, { useEffect, useState } from "react";
 import "./styles/AboutView.css";
+import "../index.css";
 import {
   FaUser,
   FaCode,
-  FaRocket,
-  FaReact,
-  FaNodeJs,
-  FaGitAlt,
-  FaPython,
-  FaJava,
+  FaRocket
 } from "react-icons/fa";
 import { FaGear } from "react-icons/fa6";
 
@@ -42,7 +38,7 @@ const AboutView = () => {
   return (
     <section id="about" className="about-view-wrapper">
       <div className="about-view-content">
-        <h1 className="about-view-title animated-title">About Me</h1>
+        <h1 className="title animated-title">About Me</h1>
         <div className="divider animated-divider"></div>
         <div className="cards-container">
           {cardsData.map((card, index) => (

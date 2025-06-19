@@ -26,7 +26,7 @@ function Navbar() {
 
           {/* Botón de cambio de tema */}
           <button onClick={toggleTheme} className="theme-button">
-            {isDarkMode ? "🌞" : "🌙"}
+            {isDarkMode ? "⏾" : "☼"}
           </button>
         </div>
 

@@ -27,7 +27,8 @@ const ExperienceView = () => {
   return (
     <section id="experience" className="experience-wrapper">
       <div className="experience-content">
-        <h2 className="experience-title">Experience</h2>
+        <h2 className="title animated-title">Experience</h2>
+        <div className="divider animated-divider"></div>
         <div className="experience-cards-scroll">
           {experiences.map((exp, idx) => (
             <ExperienceCard exp={exp} key={idx} />

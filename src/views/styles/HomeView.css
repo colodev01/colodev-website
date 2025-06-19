@@ -37,7 +37,7 @@
   }
 }
 
-.title {
+.home-title {
   font-size: 2.7rem;
   animation: fadeInUp 1s ease-in forwards;
   animation-delay: 0.5s;
@@ -118,19 +118,30 @@
   background-color: rgb(194, 191, 191);
   border-radius: 50%;
   position: relative;
-  overflow: visible; /* Para que sobresalga por arriba */
+  overflow: visible; /* Deja salir la cabeza por arriba */
   animation: pulseBorder 3s infinite ease-in-out;
+}
+
+.home-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background-color: inherit;
+  z-index: 2;
+  pointer-events: none;
+  mask-image: linear-gradient(to top, black 60%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to top, black 60%, transparent 100%);
 }
 
 .home-image img {
   position: absolute;
-  bottom: 0;      /* Alínealo con el borde inferior */
+  top: -20%;
+  left: 50%;
+  transform: translateX(-50%);
   width: 90%;
-  aspect-ratio: 2 / 3;  /* Retrato vertical */
+  aspect-ratio: 2 / 3;
   object-fit: cover;
-  border-radius: 50%;
-  mask-image: linear-gradient(to bottom, black 60%, rgba(0,0,0,0.5) 85%, transparent 100%);
-  -webkit-mask-image: linear-gradient(to bottom, black 60%, rgba(0,0,0,0.5) 85%, transparent 100%);
+  z-index: 3; /* 👈 Esto la pone por delante del ::after */
+  border-radius: 25%;
 }
-
-
