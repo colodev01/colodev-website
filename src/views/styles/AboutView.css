@@ -16,38 +16,37 @@
 }
 
 .card {
-  position: relative;
   width: 250px;
   height: 350px;
   background: var(--bg-color);
   color: var(--text-color);
-  border-radius: 15px;
+  border-radius: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly; /* Distribuye los elementos de manera uniforme */
+  justify-content: space-evenly;
   font-weight: bold;
   overflow: hidden;
-  border: 4px solid transparent;
-  
-  /* Animación de entrada */
-  opacity: 0;
-  transform: translateY(-30px);
-  transition: opacity 0.5s ease-out, transform 0.5s ease-out, border-color 0.3s ease-in-out;
+  border: 8px solid transparent;
+  box-shadow: 7px 7px 0 var(--btn-shadow-color);
+  transition: 
+    transform 0.3s ease, 
+    box-shadow 0.3s ease, 
+    border-color 0.3s ease;
 }
 
-/* Colores de borde */
+.card:hover {
+  box-shadow: none;
+  transform: translate(7px, 7px);
+}
+
 .card:nth-child(1) { border-color: #ff5733; } /* Rojo/Naranja */
 .card:nth-child(2) { border-color: #33c4ff; } /* Azul */
 .card:nth-child(3) { border-color: #33ff77; } /* Verde */
 .card:nth-child(4) { border-color: #746dd4; }
 
-.card.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
 
-/* Ícono */
+/* Icon */
 .card-icon {
   width: 80px;
   height: 80px;
@@ -78,42 +77,5 @@
   padding: 0 10px;
   min-height: 50px; /* Asegura que todas las tarjetas tengan la misma altura para el texto */
   flex-shrink: 0;
-}
-
-/* Efecto de reflejo y agrandamiento */
-.card:hover {
-  transform: scale(1.05);
-}
-
-.card .shine {
-  position: absolute;
-  top: -100%;
-  left: -100%;
-  width: 150%;
-  height: 150%;
-  background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.4), transparent);
-  transform: rotate(25deg);
-  transition: transform 0.5s ease-in-out;
-}
-
-.card:hover .shine {
-  top: 0;
-  left: 0;
-  transform: rotate(25deg) translate(200%, 200%);
-}
-
-.tech-icons-container {
-  margin-top: 80px;
-}
-
-.tech-icons-content {
-  margin-top: 40px;
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-}
-
-.tech-icon:hover {
-  transform: scale(1.3);
 }
 

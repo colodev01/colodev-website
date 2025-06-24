@@ -4,7 +4,9 @@
   --accent-color: #00c9db;
   --font-size: 1.55rem;
   --font-family: 'Space Grotesk', sans-serif;
-  --btn-shadow-color: rgba(0, 0, 0, 0.5); /* sombra negra para modo claro */
+  --btn-shadow-color: rgba(0, 0, 0, 0.5);
+  --shine-color: rgba(34, 20, 20, 0.8);
+  --shine-opacity: 0.6;
 
   /* Variables para móvil */
   --font-size-mobile: 1.2rem;
@@ -16,7 +18,9 @@
   --bg-color: #18181c;
   --text-color: #fbfbf9;
   --accent-color: #00f5d4;
-  --btn-shadow-color: rgba(255, 255, 255, 0.15); /* sombra blanca tenue para modo oscuro */
+  --btn-shadow-color: rgba(255, 255, 255, 0.15);
+  --shine-color: rgba(255, 255, 255, 0.2);
+  --shine-opacity: 0.2;
 }
 
 * {

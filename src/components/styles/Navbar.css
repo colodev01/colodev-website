@@ -127,7 +127,7 @@
   transform: scale(1.2);
 }
 
-/* Botón menú hamburguesa, oculto en desktop */
+/* Menu */
 .menu-toggle {
   display: none;
   background: none;
@@ -135,69 +135,89 @@
   cursor: pointer;
   font-size: 1.8rem;
   color: var(--text-color);
-  justify-self: end;
+  position: fixed; /* ADDED */
+  top: 1rem;        /* ADDED */
+  left: 1rem;       /* ADDED */
+  z-index: 10000;   /* ADDED to stay above the menu */
 }
 
-/* Ocultar logo y botón modo dentro del menú en desktop */
 .menu-logo-mobile,
 .theme-button-mobile {
   display: none;
 }
 
-/* Responsive móvil */
+/* Responsive mobile */
 @media (max-width: 768px) {
   .navbar {
-    grid-template-columns: 1fr 40px;
-    padding: 1rem;
+    grid-template-columns: 1fr;
+    padding: 0;
+    width: 100%;
   }
 
-  /* Mostrar solo botón hamburguesa */
   .menu-toggle {
     display: block;
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    z-index: 10000;
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    color: var(--text-color);
+    cursor: pointer;
   }
 
-  /* Ocultar logo y botón modo en barra */
   .navbar_left-side,
   .navbar_right-side {
     display: none;
   }
 
-  /* Menú vertical desplegable */
   .navbar ul {
     position: fixed;
-    top: 60px;
+    top: 0;
     left: 0;
     width: 100%;
     background-color: var(--bg-color);
     flex-direction: column;
-    gap: 15px;
-    padding: 1rem 0;
+    gap: 1rem;
+    padding: 1rem 0 2rem;
     margin: 0;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease;
-    z-index: 9998;
+    z-index: 9999;
   }
 
   .navbar ul.active {
-    max-height: 500px;
+    max-height: 600px; /* Show dropdown */
   }
 
-  .navbar li a, 
-  .navbar li button.theme-button {
-    margin: 0 1.5rem;
-    font-size: 1.2rem;
-  }
-
-  /* Mostrar logo y botón tema dentro del menú en móvil */
-  .menu-logo-mobile,
-  .theme-button-mobile {
-    display: block;
+  .menu-logo-mobile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1.5rem;
   }
 
   .menu-logo-mobile .logo {
     font-size: 1.6rem;
     font-weight: bold;
+  }
+
+  .theme-button-mobile {
+    display: flex;
+    align-items: center;
+    padding-right: 1.5rem;
+  }
+
+  .navbar li:not(.menu-logo-mobile):not(.theme-button-mobile) {
+    margin-left: 1.5rem;
+  }
+
+  .navbar li a,
+  .navbar li button.theme-button {
+    font-size: 1.1rem;
+    font-weight: 600;
   }
 }

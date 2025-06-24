@@ -28,7 +28,9 @@ const HomeView = () => {
         </div>
 
         <div className="home-image">
-          <img src="/images/franco-home.png" alt="Franco Picture" />
+          <div className="image-wrapper">
+            <img src="/images/franco-home.png" alt="Franco Picture" />
+          </div>
         </div>
       </div>
     </section>

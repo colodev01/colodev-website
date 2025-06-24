@@ -46,7 +46,6 @@ const AboutView = () => {
               <div className="card-icon">{card.icon}</div>
               <h2 className="card-title">{card.title}</h2>
               <p className="card-description">{card.description}</p>
-              <div className="shine"></div>
             </div>
           ))}
         </div>

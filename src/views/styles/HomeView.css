@@ -118,14 +118,14 @@
 
 .home-buttons button:hover {
   box-shadow: none;
-  transform: translate(5px, 5px); /* se mueve a la posición de la sombra */
+  transform: translate(7px, 7px);
 }
 
 
 .download-cv-button {
   background-color: #1abc9c;
   color: #18181c;
-  border: 3px solid #1abc9c; /* borde más grueso y vibrante */
+  border: 3px solid #1abc9c;
 }
 
 .contact-me-button {
@@ -157,31 +157,23 @@
   background-color: #bebebe;
   border-radius: 50%;
   position: relative;
-  overflow: visible;
-  animation: pulseBorder 3s infinite ease-in-out;
+  overflow: hidden; /* Esto recorta el busto */
+  display: flex;
+  align-items: flex-end; /* Imagen se pega abajo */
+  justify-content: center;
 }
 
-.home-image::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 50%;
-  background-color: inherit;
-  z-index: 2;
-  pointer-events: none;
-  mask-image: linear-gradient(to top, black 60%, transparent 100%);
-  -webkit-mask-image: linear-gradient(to top, black 60%, transparent 100%);
+.image-wrapper {
+  position: relative;
+  transform: translateY(18%); /* Hace que la cabeza sobresalga */
+  width: 100%;
+  height: 120%;
 }
 
 .home-image img {
-  position: absolute;
-  top: -20%;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 90%;
-  aspect-ratio: 2 / 3;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  z-index: 3;
   border-radius: 25%;
 }
 
