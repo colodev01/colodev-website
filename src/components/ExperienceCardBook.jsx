@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./styles/ExperienceCardBook.css";
 
 const ExperienceCardBook = ({ exp }) => {
@@ -23,6 +23,7 @@ const ExperienceCardBook = ({ exp }) => {
       <div className="experience-info">
         <p className="experience-company">{exp.company}</p>
         <p className="experience-time">⌛ {exp.time}</p>
+        <div className="time-divider" />
         <p className="experience-desc">{exp.description}</p>
         <div className="experience-tags">
           {exp.technologies.map((tech, idx) => (

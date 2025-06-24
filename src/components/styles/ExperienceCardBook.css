@@ -80,7 +80,7 @@
   height: 100%;
   padding-bottom: 2.5rem; /* espacio para que el contenido no pise las tags */
   background-color: var(--bg-color);
-  border: 4px solid #d2b48c; /* como marco de carpeta */
+  border: 8px solid #d2b48c; /* como marco de carpeta */
   box-shadow: 0 4px 10px rgba(0,0,0,0.25);
   padding: 1rem;
   box-sizing: border-box;
@@ -116,6 +116,13 @@
   margin-bottom: 0.5rem;
 }
 
+.time-divider {
+  width: 2rem;
+  height: 1px;
+  background-color: var(--text-color, #ccc);
+  opacity: 0.4;
+}
+
 .experience-desc {
   font-size: 0.7rem;
   line-height: 1.4;
@@ -136,11 +143,10 @@
 .experience-tag {
   background-color: #1abc9c;
   color: #0f172a;
-  font-size: 0.5rem;
+  font-size: 0.6rem;
   font-weight: 600;
   padding: 0.25rem 0.6rem;
   border-radius: 9999px;
-  text-transform: uppercase;
 }
 
 

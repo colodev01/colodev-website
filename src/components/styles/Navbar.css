@@ -38,7 +38,7 @@
   font-size: 1.2rem;
   line-height: 1;
   margin-left: 2px;
-  transition: none; /* sin transición para que no cambie */
+  transition: none;
 }
 
 /* C y punto tamaño */
@@ -49,13 +49,12 @@
 }
 
 .logo-dot {
-  font-size: 1rem;
+  font-size: 1.5rem;
   line-height: 1;
   margin-left: 1px;
   transition: color 0.3s ease;
 }
 
-/* Al hacer hover sobre todo el logo, solo cambia C y punto a verde */
 .logo:hover .logo-c,
 .logo:hover .logo-dot {
   color: #1abc9c;

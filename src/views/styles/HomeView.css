@@ -131,7 +131,7 @@
 .contact-me-button {
   background-color: var(--bg-color);
   color: var(--text-color);
-  border: 3px solid #1abc9c;
+  border: 4px solid #1abc9c;
 }
 
 .download-cv-button:hover {

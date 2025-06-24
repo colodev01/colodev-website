@@ -98,6 +98,10 @@ html, body {
   animation-delay: 0.3s;
 }
 
+.section-desc {
+  font-size: 0.9rem;
+}
+
 /* Ajustes para móviles */
 @media (max-width: 768px) {
 
