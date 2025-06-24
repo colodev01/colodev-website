@@ -1,117 +1,61 @@
 .experience-wrapper {
   width: 100%;
-  background-color: var(--bg-color); 
+  background-color: var(--bg-color);
   padding: 4rem 0;
 }
 
 .experience-content {
   width: 80%;
   margin: auto;
-  padding-top: ;
 }
 
 .experience-cards-scroll {
   display: flex;
   gap: 2rem;
   overflow-x: auto;
+  padding-top: 1.5rem;
   padding-bottom: 1rem;
   scroll-snap-type: x mandatory;
   width: fit-content;
   margin: 0 auto;
   overflow: visible;
+  perspective: 1200px;
 }
 
 .experience-cards-scroll::-webkit-scrollbar {
   height: 10px;
 }
+
 .experience-cards-scroll::-webkit-scrollbar-thumb {
   background: #1abc9c;
   border-radius: 5px;
 }
+
 .experience-cards-scroll::-webkit-scrollbar-track {
   background: #1e293b;
 }
 
-.experience-card-modern {
-  width: 12.5rem;
-  background-color: #1e293b;
-  border-radius: 1rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
-  padding: 1.3rem;
-  scroll-snap-align: start;
-  display: flex;
-  flex-direction: column;
-  transition: transform 0.3s ease;
-}
-
-.logo-wrapper {
-  width: 3rem;
-  height: 3rem;
-  background: white;
-  border-radius: 9999px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 1rem;
-  overflow: hidden;
-}
-
-.logo-img {
-  width: 2rem;
-  height: 2rem;
-  object-fit: contain;
-}
-
-.experience-info {
-  color: white;
-}
-
-.experience-role {
-  font-size: 1.1rem;
-  font-weight: 600;
-  margin-bottom: 0.25rem;
-}
-
-.experience-company,
-.experience-time {
-  font-size: 0.72rem;
-  color: #94a3b8;
-  font-style: italic;
-}
-
-.experience-description {
-  margin-top: 0.75rem;
-  font-size: 0.8rem;
-  color: #e2e8f0;
-}
-
-.experience-tags {
-  margin-top: 1rem;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-}
-
-.experience-tag {
-  background-color: #1abc9c;
-  color: #0f172a;
-  font-size: 0.55rem;
-  font-weight: 500;
-  padding: 0.25rem 0.6rem;
-  border-radius: 9999px;
-}
-
-@keyframes fadeInDown {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
+@media (max-width: 768px) {
+  .experience-cards-scroll {
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+    width: 100%;
+    gap: 2rem;
+    scroll-snap-type: none;
   }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 
-.experience-card-modern:hover {
-  transform: scale(1.05);
+  .experience-card-modern {
+    width: 90%;
+    height: auto;
+  }
+
+  .logo-wrapper {
+    height: 9rem; /* sigue igual */
+  }
+
+  .experience-info {
+    height: auto;
+    max-height: none;
+  }
 }
