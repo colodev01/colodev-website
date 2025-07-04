@@ -35,15 +35,22 @@ const ProjectsView = () => {
                 <p>{currentProject.description}</p>
                 <div className="project-meta">
                   <p className="project-info__tag">
-                    Client: {currentProject.client}
+                    <span className="tag-label">Client:</span>
+                    <span className="tag-value">{currentProject.client}</span>
                   </p>
                   <div className="info-divider"></div>
                   <p className="project-info__tag">
-                    Completion Time: {currentProject.completion}
+                    <span className="tag-label">Completion Time:</span>
+                    <span className="tag-value">
+                      {currentProject.completion}
+                    </span>
                   </p>
                   <div className="info-divider"></div>
                   <p className="project-info__tag">
-                    Technologies: {currentProject.tags.join(", ")}
+                    <span className="tag-label">Technologies:</span>
+                    <span className="tag-value">
+                      {currentProject.tags.join(", ")}
+                    </span>
                   </p>
                 </div>
               </div>

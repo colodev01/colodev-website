@@ -9,53 +9,27 @@
   margin: auto;
 }
 
-.experience-cards-scroll {
-  display: flex;
-  gap: 2rem;
-  overflow-x: auto;
-  padding-top: 2rem;
-  padding-bottom: 1rem;
-  scroll-snap-type: x mandatory;
-  width: fit-content;
-  margin: 0 auto;
-  overflow: visible;
-  perspective: 1200px;
+.experience-card {
+  background-color: var(--card-bg-color, #fff);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0.3rem 0.3rem 0.6rem rgba(0, 0, 0, 0.1);
+  color: var(--text-color);
+  font-size: var(--font-size);
+  transition: transform 0.2s ease;
 }
 
-.experience-cards-scroll::-webkit-scrollbar {
-  height: 10px;
+.experience-card:hover {
+  transform: translateY(-0.2rem);
 }
 
-.experience-cards-scroll::-webkit-scrollbar-thumb {
-  background: #1abc9c;
-  border-radius: 5px;
-}
-
-.experience-cards-scroll::-webkit-scrollbar-track {
-  background: #1e293b;
-}
-
-@media (max-width: 768px) {
-  .experience-cards-scroll {
-    flex-direction: column;
-    align-items: center;
-    overflow-x: hidden;
-    width: 100%;
-    gap: 2rem;
-    scroll-snap-type: none;
-  }
-
-  .experience-card-modern {
-    width: 90%;
-    height: auto;
-  }
-
-  .logo-wrapper {
-    height: 9rem; /* sigue igual */
-  }
-
-  .experience-info {
-    height: auto;
-    max-height: none;
-  }
+.tech-tag {
+  display: inline-block;
+  background-color: var(--tag-bg-color, #eee);
+  color: var(--tag-text-color, #333);
+  padding: 0.3rem 0.6rem;
+  border-radius: 0.5rem;
+  margin-right: 0.5rem;
+  margin-top: 0.5rem;
+  font-size: var(--font-size);
 }
