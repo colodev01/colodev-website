@@ -26,7 +26,7 @@ const HomeView = () => {
             </div>
           </div>
         </div>
-
+        
         <div className="home-image">
           <div className="image-wrapper">
             <img src="/images/franco-home.png" alt="Franco Picture" />

@@ -2,7 +2,7 @@
   position: relative;
   display: flex;
   width: 100%;
-  height: 28rem;
+  height: 90vh;
   min-height: 28rem;
   background: center / cover no-repeat;
   overflow: hidden;
@@ -52,7 +52,7 @@
 }
 
 .home-title {
-  font-size: 2.7rem;
+  font-size: 3rem;
   animation-duration: 1s;
   animation-timing-function: ease-in;
   animation-delay: 0.5s;
@@ -86,7 +86,7 @@
 
 .highlight-name {
   color: #1abc9c;
-  font-size: 2.7rem;
+  font-size: 3rem;
 }
 
 /* Home buttons */
@@ -112,13 +112,13 @@
     border-color 0.3s ease, 
     box-shadow 0.3s ease, 
     transform 0.3s ease;
-  box-shadow: 7px 7px 0 var(--btn-shadow-color);
+  box-shadow: 0.3rem 0.3rem 0 var(--btn-shadow-color);
   position: relative;
 }
 
 .home-buttons button:hover {
   box-shadow: none;
-  transform: translate(7px, 7px);
+  transform: translate(0.3rem, 0.3rem);
 }
 
 
@@ -157,15 +157,15 @@
   background-color: #bebebe;
   border-radius: 50%;
   position: relative;
-  overflow: hidden; /* Esto recorta el busto */
+  overflow: hidden;
   display: flex;
-  align-items: flex-end; /* Imagen se pega abajo */
+  align-items: flex-end;
   justify-content: center;
 }
 
 .image-wrapper {
   position: relative;
-  transform: translateY(18%); /* Hace que la cabeza sobresalga */
+  transform: translateY(18%);
   width: 100%;
   height: 120%;
 }
@@ -175,6 +175,14 @@
   height: 100%;
   object-fit: cover;
   border-radius: 25%;
+}
+
+/* Diagonals */
+.diagonal-rect {
+  background-color: blue;
+  height: 4rem;
+  width: auto;
+  z-index: 999999;
 }
 
 @media (max-width: 768px) {

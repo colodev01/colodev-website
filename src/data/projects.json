@@ -1,0 +1,24 @@
+[
+  {
+    "id": 1,
+    "title": "Quick S.O.S (Mobile)",
+    "image": "/images/projects/project-quicksos.jpeg",
+    "description": "An emergency service app for people with disabilities.",
+    "repo": "https://github.com/usuario/proyecto1",
+    "demo": "https://proyecto1.com",
+    "client": "[Public use]",
+    "completion": "3 months",
+    "tags": ["Flutter", "Dart"]
+  },
+  {
+    "id": 2,
+    "title": "Proyecto 2",
+    "image": "/images/projects/project-quicksos.jpeg",
+    "description": "Otro proyecto cool para mostrar.",
+    "repo": "https://github.com/usuario/proyecto2",
+    "demo": null,
+    "client": "Startup XYZ",
+    "completion": "2 weeks",
+    "tags": ["React", "Node.js", "MongoDB"]
+  }
+]

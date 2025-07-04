@@ -11,7 +11,7 @@
   z-index: 1;
 
   /* Sombra sólida con offset 7px abajo a la derecha */
-  box-shadow: 7px 7px 0 var(--btn-shadow-color);
+  box-shadow: 0.4rem 0.4rem var(--btn-shadow-color);
 }
 
 .experience-card-modern:hover {

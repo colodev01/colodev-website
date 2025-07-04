@@ -28,7 +28,7 @@
   font-weight: bold;
   overflow: hidden;
   border: 8px solid transparent;
-  box-shadow: 7px 7px 0 var(--btn-shadow-color);
+  box-shadow: 0.4rem 0.4rem 0 var(--btn-shadow-color);
   transition: 
     transform 0.3s ease, 
     box-shadow 0.3s ease, 
