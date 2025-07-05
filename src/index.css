@@ -1,11 +1,13 @@
 :root {
-  --bg-color: #fbfbf9;
+  --bg-color: #f0f0f0;
   --text-color: #18181c;
   --accent-color: #00c9db;
-  --font-size: 1.15rem;
-  --section-font-size: 2.4rem;
+  --font-size: 1.4rem;
+  --logo-font-size: 2.4rem;
+  --navbar-font-size: 1.75rem;
+  --section-font-size: 6rem;
   --font-family: 'Space Grotesk', sans-serif;
-  --btn-shadow-color: rgba(0, 0, 0, 0.5);
+  --btn-shadow-color: rgba(27, 27, 27, 0.5);
   --shine-color: rgba(34, 20, 20, 0.8);
   --shine-opacity: 0.6;
 
@@ -17,7 +19,7 @@
 
 [data-theme="dark"] {
   --bg-color: #18181c;
-  --text-color: #fbfbf9;
+  --text-color: #f0f0f0;
   --accent-color: #00f5d4;
   --btn-shadow-color: rgba(255, 255, 255, 0.15);
   --shine-color: rgba(255, 255, 255, 0.2);
@@ -26,7 +28,6 @@
 
 * {
   font-family: var(--font-family);
-  font-size: var(--font-size);
   color: var(--text-color);
   box-sizing: border-box;
   margin: 0;
@@ -45,7 +46,7 @@ html, body {
 .content {
   display: flex;
   flex-direction: column;
-  gap: 200px;
+  gap: 1rem;
 }
 
 /* Title and divider line */
@@ -83,20 +84,6 @@ html, body {
   opacity: 0;
   transform: translateX(-50px);
   animation: slideInLeft 0.8s ease-out forwards;
-}
-
-.divider,
-.animated-divider {
-  height: 0.12rem;
-  background-color: var(--text-color);
-  border-radius: 2px;
-  margin: 1rem 0;
-}
-
-.animated-divider {
-  width: 0;
-  animation: growLine 1s ease-out forwards;
-  animation-delay: 0.3s;
 }
 
 .section-desc {

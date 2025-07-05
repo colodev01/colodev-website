@@ -6,7 +6,7 @@ const ExperienceView = () => {
   return (
     <section id="experience" className="experience-wrapper">
       <div className="experience-content">
-        <h2 className="title animated-title">Experience</h2>
+        <h2 className="title animated-title">Experience.</h2>
         <div className="divider animated-divider"></div>
         <p className="experience-description">
           Here's a collection of my archives that contain info about what I've done so far...

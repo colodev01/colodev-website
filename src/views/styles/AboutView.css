@@ -4,78 +4,71 @@
 }
 
 .about-view-content {
-  width: 80%;
+  width: 75%;
   margin: auto;
 }
 
-.cards-container {
+.about-columns {
   display: flex;
-  justify-content: center;
-  gap: 1.2rem;
-  margin-top: 80px;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+  gap: 15rem;
 }
 
-.card {
-  width: 250px;
-  height: 350px;
-  background: var(--bg-color);
-  color: var(--text-color);
-  border-radius: 0;
+.about-text {
+  flex: 1 1 300px;
+  text-align: left;
+  font-size: var(--font-size);
+  max-width: 45rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+.about-text p {
+  margin-bottom: 1.5rem; /* Esto separa los párrafos */
+  line-height: 1.6; /* Espaciado entre líneas */
+}
+
+
+.hobbies-column {
+  flex: 1 1 250px;
+  display: flex;
+  justify-content: center;
+}
+
+.hobbies-grid {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-  font-weight: bold;
-  overflow: hidden;
-  border: 8px solid transparent;
-  box-shadow: 0.4rem 0.4rem 0 var(--btn-shadow-color);
-  transition: 
-    transform 0.3s ease, 
-    box-shadow 0.3s ease, 
-    border-color 0.3s ease;
+  gap: 1rem;
+  padding-bottom: 3rem;
 }
 
-.card:hover {
-  box-shadow: none;
-  transform: translate(7px, 7px);
+.hex-row {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
 }
 
-.card:nth-child(1) { border-color: #ff5733; } /* Rojo/Naranja */
-.card:nth-child(2) { border-color: #33c4ff; } /* Azul */
-.card:nth-child(3) { border-color: #33ff77; } /* Verde */
-.card:nth-child(4) { border-color: #746dd4; }
+.hex-row.center {
+  justify-content: center;
+}
 
-
-/* Icon */
-.card-icon {
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
+.hex-icon {
+  width: 7rem;
+  height: 7rem;
+  background: #f4f4f4;
+  clip-path: polygon(50% 0%, 93% 25%, 93% 75%, 50% 100%, 7% 75%, 7% 25%);
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-shrink: 0;
-  background: transparent;
-  padding: 5px; 
+  font-size: 3rem;
+  color: #444;
+  transition: transform 0.3s ease, background 0.3s ease;
 }
 
-/* Título con altura fija */
-.card-title {
-  font-size: 25px;
-  font-weight: bold;
-  text-align: center;
-  min-height: 30px;
-  flex-shrink: 0;
+.hex-icon:hover {
+  background: #bebebe;
+  transform: scale(1.1);
 }
-
-/* Descripción con altura fija */
-.card-description {
-  font-size: 0.7rem;
-  font-weight: normal;
-  font-style: italic;
-  text-align: center;
-  padding: 0 10px;
-  min-height: 50px; /* Asegura que todas las tarjetas tengan la misma altura para el texto */
-  flex-shrink: 0;
-}
-

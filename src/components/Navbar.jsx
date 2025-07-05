@@ -32,7 +32,6 @@ function Navbar() {
   return (
     <div className="navbar-wrapper">
       <nav className="navbar">
-        {/* Izquierda: Logo (oculto en móvil) */}
         <div className="navbar_left-side">
           <a href="#home" className="logo">
             <span className="logo-c">C</span>

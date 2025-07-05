@@ -1,53 +1,85 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "./styles/AboutView.css";
 import "../index.css";
 import {
-  FaUser,
-  FaCode,
-  FaRocket
+  FaSpider,
+  FaPython,
+  FaLaptop,
+  FaDumbbell,
+  FaReact,
+  FaNodeJs,
 } from "react-icons/fa";
-import { FaGear } from "react-icons/fa6";
+import { FaPencil } from "react-icons/fa6";
 
-const iconsSize = 50;
-
-const cardsData = [
-  {
-    icon: <FaUser size={iconsSize}/>,
-    title: "Who am I",
-    description: "Engineer from Mendoza passionate about building smooth, user-first apps.",
-  },
-  {
-    icon: <FaCode size={iconsSize}/>,
-    title: "What I do",
-    description: "Full-stack development and data engineering.",
-  },
-  {
-    icon: <FaRocket size={iconsSize}/>,
-    title: "My Vision",
-    description:
-      "To build meaningful, scalable solutions and grow through collaboration.",
-  },
-  {
-    icon: <FaGear size={iconsSize}/>,
-    title: "How I Work",
-    description: "Agile mindset, test-driven, team-focused. Always learning. Always shipping.",
-  }
+const hobbies = [
+  { icon: <FaSpider />, color: "#FFB347" }, // naranja suave
+  { icon: <FaPython />, color: "#B4A7D6" }, // lavanda
+  { icon: <FaLaptop />, color: "#AED9E0" }, // celeste
+  { icon: <FaDumbbell />, color: "#FFD3B6" }, // durazno
+  { icon: <FaReact />, color: "#D3ECA7" }, // verde menta
+  { icon: <FaNodeJs />, color: "#FFAAA5" }, // rosa suave
+  { icon: <FaPencil />, color: "#C7CEEA" }, // lila pastel
 ];
 
 const AboutView = () => {
   return (
     <section id="about" className="about-view-wrapper">
       <div className="about-view-content">
-        <h1 className="title animated-title">About Me</h1>
-        <div className="divider animated-divider"></div>
-        <div className="cards-container">
-          {cardsData.map((card, index) => (
-            <div key={index} className="card visible">
-              <div className="card-icon">{card.icon}</div>
-              <h2 className="card-title">{card.title}</h2>
-              <p className="card-description">{card.description}</p>
+        <h1 className="title animated-title">About.</h1>
+
+        <div className="about-columns">
+          <div className="about-text">
+            <p>
+              I'm a full-stack developer 👨‍💻 from Mendoza, Argentina 📍 with a
+              passion for tech, design, and building meaningful products. When
+              I'm not coding, I love exploring hobbies that help me stay
+              inspired and balanced, such as drawing and calisthenics. For last
+              and not least, I'm a big Spider-Man fan 🕸️ .
+            </p>
+            <p>{""}</p>
+            <p>
+              My main focus is backend development with Python 🐍 and Django, but I
+              also work as a full-stack developer using React ⚛︎ and Node.js.
+              Additionally, I have experience in data engineering 📊, particularly
+              in ETL processes with Python and SQL on Azure Databricks.
+            </p>
+          </div>
+
+          <div className="hobbies-grid">
+            <div className="hex-row center">
+              {hobbies.slice(0, 2).map((h, i) => (
+                <div
+                  className="hex-icon"
+                  key={i}
+                  style={{ backgroundColor: h.color }}
+                >
+                  {h.icon}
+                </div>
+              ))}
             </div>
-          ))}
+            <div className="hex-row">
+              {hobbies.slice(2, 5).map((h, i) => (
+                <div
+                  className="hex-icon"
+                  key={i + 2}
+                  style={{ backgroundColor: h.color }}
+                >
+                  {h.icon}
+                </div>
+              ))}
+            </div>
+            <div className="hex-row center">
+              {hobbies.slice(5, 7).map((h, i) => (
+                <div
+                  className="hex-icon"
+                  key={i + 5}
+                  style={{ backgroundColor: h.color }}
+                >
+                  {h.icon}
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>
